@@ -375,7 +375,7 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
     with gr.Tabs():
 
         # ── TAB 1: FOTO ──────────────────────────────────────────────────────
-        with gr.Tab("📸 Analizar Foto"):
+        with gr.Tab("Analizar Foto"):
             with gr.Row():
 
                 # COLUMNA 1 — Modo e imagen
@@ -391,8 +391,11 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
                 # COLUMNA 2 — Filtros y valoración
                 with gr.Column(scale=1, min_width=200):
                     n_slider      = gr.Slider(1, 10, value=5, step=1, label="Nº recetas")
+                    gr.HTML("<div style='height:8px;'></div>")
                     conf_radio    = gr.Radio(["Bajo", "Medio", "Alto"], value="Medio", label="Precisión")
+                    gr.HTML("<div style='height:8px;'></div>")
                     filtro_tiempo = gr.Dropdown(choices=OPCIONES_TIEMPO, value="Todos", label="⏱ Tiempo máx.")
+                    gr.HTML("<div style='height:8px;'></div>")
                     filtro_faltan = gr.Dropdown(choices=OPCIONES_FALTAN, value="Todos", label="❌ Máx. faltantes")
 
                     with gr.Group(visible=False) as val_group:
@@ -426,7 +429,7 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
             )
 
         # ── TAB 2: MANUAL ────────────────────────────────────────────────────
-        with gr.Tab("⌨️ Manual"):
+        with gr.Tab("Manual"):
             with gr.Row():
                 manual_ing = gr.Textbox(
                     label="Ingredientes (separados por coma)",
@@ -448,7 +451,7 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
             )
 
         # ── TAB 3: ANALYTICS ─────────────────────────────────────────────────
-        with gr.Tab("📊 Analytics"):
+        with gr.Tab("Analytics"):
             refresh_btn = gr.Button("🔄 Actualizar dashboard")
             dashboard   = gr.HTML()
             export_btn  = gr.Button("📥 Exportar datos")
