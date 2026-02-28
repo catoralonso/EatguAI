@@ -257,21 +257,23 @@ def mostrar_analytics():
 CSS_CUSTOM = f"""
 {renderer.get_base_styles()}
 
+/* Contenedor principal */
 .gradio-container {{
     background: {COLORS.BG_PRIMARY} !important;
     font-family: 'DM Sans', sans-serif !important;
 }}
 
+/* Tabs */
 .tab-nav button {{
     font-weight: 600 !important;
     border-radius: 12px !important;
 }}
-
 .tab-nav button.selected {{
     background: rgba(125,211,252,0.1) !important;
     color: {COLORS.TEXT_PRIMARY} !important;
 }}
 
+/* Botón primario */
 button.primary {{
     background: linear-gradient(135deg, rgba(125,211,252,0.8), rgba(167,139,250,0.8)) !important;
     border: none !important;
@@ -279,66 +281,55 @@ button.primary {{
     font-weight: 700 !important;
 }}
 
-/* Input de imagen */
-.upload-container, .image-container, [data-testid="image"] {{
+/* Bloques con brillo estilo v3 */
+.block {{
     background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid {COLORS.BORDER_SUBTLE} !important;
+    border: 1px solid rgba(125, 211, 252, 0.25) !important;
     border-radius: 16px !important;
+    box-shadow: 
+        0 0 18px rgba(125, 211, 252, 0.15),
+        0 0 40px rgba(125, 211, 252, 0.06),
+        inset 0 0 20px rgba(125, 211, 252, 0.03) !important;
+}}
+.block:hover {{
+    border-color: rgba(125, 211, 252, 0.45) !important;
+    box-shadow: 
+        0 0 28px rgba(125, 211, 252, 0.25),
+        0 0 60px rgba(125, 211, 252, 0.1),
+        inset 0 0 20px rgba(125, 211, 252, 0.05) !important;
 }}
 
-/* Zona de drop */
-.upload-container .wrap {{
-    background: {COLORS.BG_SECONDARY} !important;
-    border: 2px dashed {COLORS.BORDER_SUBTLE} !important;
-    border-radius: 16px !important;
-    color: {COLORS.TEXT_MUTED} !important;
-}}
-
-/* Sliders */
-input[type="range"] {{
-    accent-color: {COLORS.ICE_BLUE} !important;
-}}
-
-.gradio-slider {{
-    background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid {COLORS.BORDER_SUBTLE} !important;
-    border-radius: 12px !important;
-    padding: 12px !important;
-}}
-
-/* Dropdowns */
-.gradio-dropdown, select {{
-    background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid {COLORS.BORDER_SUBTLE} !important;
-    border-radius: 12px !important;
-    color: {COLORS.TEXT_PRIMARY} !important;
-}}
-
-/* Radio buttons */
-.gradio-radio {{
-    background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid {COLORS.BORDER_SUBTLE} !important;
-    border-radius: 12px !important;
-    padding: 10px !important;
-}}
-
-.gradio-radio label {{
-    color: {COLORS.TEXT_PRIMARY} !important;
-}}
-
-/* Labels generales */
+/* Labels todos celestes */
 label span {{
-    color: {COLORS.TEXT_SECONDARY} !important;
+    color: {COLORS.ICE_BLUE} !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.82em !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px !important;
 }}
 
-/* Bloques contenedores */
-.gradio-block, .block {{
-    background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid {COLORS.BORDER_SUBTLE} !important;
+/* Quitar fondo gris interno de grupos y fieldsets */
+.gradio-group, fieldset {{
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}}
+
+/* Quitar fondo gris de radio y slider */
+.gradio-radio, .gradio-slider {{
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}}
+
+/* Imagen */
+.gradio-image > .wrap {{
+    border: 1px solid rgba(125, 211, 252, 0.25) !important;
     border-radius: 16px !important;
+    overflow: hidden !important;
 }}
 
-/* Textbox manual */
+/* Textbox */
 textarea, input[type="text"] {{
     background: {COLORS.BG_PRIMARY} !important;
     border: 1px solid {COLORS.BORDER_SUBTLE} !important;
@@ -346,16 +337,27 @@ textarea, input[type="text"] {{
     border-radius: 10px !important;
 }}
 
-/* Eliminar borde gris imagen */
-.gradio-image > .wrap {{
-    border: 1px solid {COLORS.BORDER_SUBTLE} !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
+/* Slider color */
+input[type="range"] {{
+    accent-color: {COLORS.ICE_BLUE} !important;
 }}
 
-/* Quitar línea separadora */
-fieldset {{
+/* Cada componente dentro de Row tiene su propio borde */
+.gradio-row > div > .block {{
+    background: {COLORS.BG_SECONDARY} !important;
+    border: 1px solid rgba(125, 211, 252, 0.25) !important;
+    border-radius: 16px !important;
+    box-shadow: 
+        0 0 18px rgba(125, 211, 252, 0.15),
+        0 0 40px rgba(125, 211, 252, 0.06) !important;
+}}
+
+/* Quitar borde del Row contenedor */
+.gradio-row {{
+    background: transparent !important;
     border: none !important;
+    box-shadow: none !important;
+    gap: 8px !important;
 }}
 """
 
@@ -382,12 +384,12 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
                     )
                     imagen_input = gr.Image(type="pil", label="Foto de tu nevera", height=260)
                     analizar_btn = gr.Button("Analizar nevera", variant="primary", size="lg")
-                    with gr.Row():
-                        n_slider  = gr.Slider(1, 10, value=5, step=1, label="Nº recetas")
-                        conf_radio = gr.Radio(["Bajo", "Medio", "Alto"], value="Medio", label="Precisión")
-                    with gr.Row():
-                        filtro_tiempo  = gr.Dropdown(choices=OPCIONES_TIEMPO, value="Todos", label="⏱ Tiempo máx.")
-                        filtro_faltan  = gr.Dropdown(choices=OPCIONES_FALTAN, value="Todos", label="❌ Máx. faltantes")
+                with gr.Row():
+                    n_slider  = gr.Slider(1, 10, value=5, step=1, label="Nº recetas")
+                    conf_radio = gr.Radio(["Bajo", "Medio", "Alto"], value="Medio", label="Precisión")
+                with gr.Row():
+                    filtro_tiempo  = gr.Dropdown(choices=OPCIONES_TIEMPO, value="Todos", label="⏱ Tiempo máx.")
+                    filtro_faltan  = gr.Dropdown(choices=OPCIONES_FALTAN, value="Todos", label="❌ Máx. faltantes")
                     
 
                     with gr.Group(visible=False) as val_group:
