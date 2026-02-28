@@ -361,6 +361,14 @@ input[type="range"] {{
     box-shadow: none !important;
     gap: 8px !important;
 }}
+
+/* Quitar borde de separadores HTML */
+.gradio-html {{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}}
 """
 
 # =============================================================================
