@@ -5321,5 +5321,4043 @@
       "2. Cocinar o mezclar los ingredientes segun el tipo de receta.",
       "5. Ajustar sal y especias al gusto y servir."
     ]
+  },
+  {
+    "receta_id": 236,
+    "nombre": "gazpacho andaluz",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "tomate",
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "pepino",
+        "qty": 0.5,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vinagre",
+      "sal",
+      "pan"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 15,
+    "calorias_aprox": 120,
+    "tags": [
+      "tradicional",
+      "verano",
+      "andalucia",
+      "vegetariano",
+      "vegan",
+      "frio"
+    ],
+    "proceso_corto": "Triturar todos los ingredientes, añadir aceite y vinagre, colar y refrigerar.",
+    "proceso_detallado": [
+      "1. Lavar y trocear los tomates, pimiento, pepino y ajo.",
+      "2. Remojar un trozo de pan duro en agua unos minutos.",
+      "3. Triturar todo junto con aceite de oliva, vinagre y sal.",
+      "4. Colar con un colador fino para obtener una textura suave.",
+      "5. Refrigerar al menos 1 hora y servir muy frío con guarnición al gusto."
+    ]
+  },
+  {
+    "receta_id": 237,
+    "nombre": "salmorejo cordobes",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "tomate",
+        "qty": 800,
+        "unit": "g"
+      },
+      {
+        "item": "pan",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "huevo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal",
+      "jamon serrano"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 20,
+    "calorias_aprox": 250,
+    "tags": [
+      "tradicional",
+      "andalucia",
+      "verano",
+      "frio"
+    ],
+    "proceso_corto": "Triturar tomate con pan, ajo y aceite hasta obtener crema densa. Servir con huevo duro y jamón.",
+    "proceso_detallado": [
+      "1. Pelar y trocear los tomates maduros.",
+      "2. Remojar el pan en agua y escurrirlo bien.",
+      "3. Triturar tomate, pan remojado, ajo y aceite de oliva hasta crema muy fina.",
+      "4. Salar al gusto y refrigerar al menos 2 horas.",
+      "5. Servir con huevo cocido picado y virutas de jamón serrano por encima."
+    ]
+  },
+  {
+    "receta_id": 238,
+    "nombre": "paella valenciana",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "arroz",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "pollo",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "conejo",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "judía verde",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "pimentón",
+      "azafrán",
+      "sal",
+      "agua",
+      "ajo"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 60,
+    "calorias_aprox": 550,
+    "tags": [
+      "tradicional",
+      "valencia",
+      "arroz",
+      "domingo"
+    ],
+    "proceso_corto": "Sofreír carne, añadir verduras y tomate, incorporar arroz y caldo con azafrán. Cocinar sin remover.",
+    "proceso_detallado": [
+      "1. Calentar aceite en la paella y dorar el pollo y conejo troceados.",
+      "2. Añadir la judía verde y sofreír unos minutos.",
+      "3. Incorporar el tomate rallado y el pimentón, sofreír sin que se queme.",
+      "4. Añadir agua caliente (doble que de arroz), azafrán y sal. Dejar hervir 10 min.",
+      "5. Repartir el arroz uniformemente, cocinar 18-20 min sin remover.",
+      "6. Retirar del fuego, tapar con papel de aluminio y dejar reposar 5 min."
+    ]
+  },
+  {
+    "receta_id": 239,
+    "nombre": "cocido madrileño",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "garbanzos",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "pollo",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "morcillo",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "patata",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "zanahoria",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "ajo",
+      "cebolla",
+      "aceite",
+      "fideos",
+      "repollo"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 180,
+    "calorias_aprox": 700,
+    "tags": [
+      "tradicional",
+      "madrid",
+      "invierno",
+      "cuchara"
+    ],
+    "proceso_corto": "Cocer garbanzos con carnes y verduras a fuego lento. Servir en tres vuelcos: sopa, garbanzos y carnes.",
+    "proceso_detallado": [
+      "1. Poner los garbanzos en remojo la noche anterior.",
+      "2. Poner a hervir agua con las carnes, chorizo y hueso de jamón.",
+      "3. Añadir los garbanzos escurridos cuando el agua hierva.",
+      "4. Agregar zanahoria, patata y repollo a mitad de cocción.",
+      "5. Colar el caldo y cocer fideos para la sopa (primer vuelco).",
+      "6. Servir garbanzos y verduras (segundo vuelco) y carnes aparte (tercer vuelco)."
+    ]
+  },
+  {
+    "receta_id": 240,
+    "nombre": "fabada asturiana",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "faba asturiana",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "morcilla",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "lacón",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "azafrán",
+      "ajo",
+      "cebolla"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 180,
+    "calorias_aprox": 650,
+    "tags": [
+      "tradicional",
+      "asturias",
+      "invierno",
+      "cuchara",
+      "contundente"
+    ],
+    "proceso_corto": "Cocer las fabes con el compango a fuego muy lento hasta que estén tiernas.",
+    "proceso_detallado": [
+      "1. Poner las fabes en remojo la noche anterior con agua fría.",
+      "2. Al día siguiente, escurrir y poner en olla con agua fría que las cubra.",
+      "3. Añadir el chorizo, morcilla y lacón.",
+      "4. Llevar a ebullición y retirar la espuma. Bajar el fuego al mínimo.",
+      "5. Cocinar 2-3 horas 'asustando' con agua fría a mitad para que no se rompan las fabes.",
+      "6. Ajustar sal al final y reposar tapado 30 minutos antes de servir."
+    ]
+  },
+  {
+    "receta_id": 241,
+    "nombre": "pulpo a la gallega",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pulpo",
+        "qty": 1,
+        "unit": "kg"
+      },
+      {
+        "item": "patata",
+        "qty": 4,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "pimentón dulce",
+      "pimentón picante",
+      "sal gruesa"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 60,
+    "calorias_aprox": 280,
+    "tags": [
+      "tradicional",
+      "galicia",
+      "marisco",
+      "tapa"
+    ],
+    "proceso_corto": "Cocer el pulpo, laminarlo sobre patatas cocidas y aliñar con aceite y pimentón.",
+    "proceso_detallado": [
+      "1. Congelar el pulpo al menos 24h para ablandar las fibras. Descongelar en nevera.",
+      "2. Hervir agua en olla grande y 'asustar' el pulpo 3 veces antes de sumergirlo.",
+      "3. Cocer el pulpo 40-50 min a fuego medio hasta que esté tierno.",
+      "4. Cocer las patatas peladas en la misma agua del pulpo.",
+      "5. Cortar patatas en rodajas y disponer en plato de madera. Laminar el pulpo encima.",
+      "6. Aliñar con aceite de oliva virgen extra, sal gruesa, pimentón dulce y un poco de picante."
+    ]
+  },
+  {
+    "receta_id": 242,
+    "nombre": "pisto manchego",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "calabacín",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento rojo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal",
+      "azúcar",
+      "ajo"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 50,
+    "calorias_aprox": 180,
+    "tags": [
+      "tradicional",
+      "castilla la mancha",
+      "vegetariano",
+      "vegan"
+    ],
+    "proceso_corto": "Pochar las verduras por orden, añadir tomate y cocinar hasta que todo esté bien integrado.",
+    "proceso_detallado": [
+      "1. Picar todas las verduras en trozos similares.",
+      "2. Pochar la cebolla y ajo en aceite de oliva a fuego lento.",
+      "3. Añadir los pimientos y cocinar 10 minutos.",
+      "4. Incorporar el calabacín y cocinar otros 10 minutos.",
+      "5. Añadir el tomate triturado, sal y una pizca de azúcar para corregir la acidez.",
+      "6. Cocinar a fuego lento 20-25 minutos hasta que todo esté pochado y sin agua."
+    ]
+  },
+  {
+    "receta_id": 243,
+    "nombre": "croquetas de jamón",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "jamon serrano",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "leche",
+        "qty": 500,
+        "unit": "ml"
+      },
+      {
+        "item": "harina",
+        "qty": 80,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "mantequilla",
+      "sal",
+      "nuez moscada",
+      "pan rallado",
+      "aceite"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 90,
+    "calorias_aprox": 350,
+    "tags": [
+      "tradicional",
+      "tapa",
+      "aperitivo"
+    ],
+    "proceso_corto": "Preparar bechamel densa con jamón, enfriar, formar croquetas, empanar y freír.",
+    "proceso_detallado": [
+      "1. Picar el jamón finamente.",
+      "2. Derretir mantequilla en sartén, añadir harina y tostar 2 minutos sin que se queme.",
+      "3. Añadir la leche caliente poco a poco sin dejar de remover hasta obtener bechamel densa.",
+      "4. Incorporar el jamón, sal y nuez moscada. Cocinar 5 min más.",
+      "5. Verter en bandeja, cubrir con film a piel y refrigerar 4 horas mínimo.",
+      "6. Formar croquetas, pasar por huevo batido y pan rallado. Freír en aceite abundante bien caliente."
+    ]
+  },
+  {
+    "receta_id": 244,
+    "nombre": "patatas bravas",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "patata",
+        "qty": 800,
+        "unit": "g"
+      },
+      {
+        "item": "tomate triturado",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite",
+      "pimentón picante",
+      "ajo",
+      "sal",
+      "vinagre",
+      "cayena"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 40,
+    "calorias_aprox": 320,
+    "tags": [
+      "tapa",
+      "aperitivo",
+      "vegetariano"
+    ],
+    "proceso_corto": "Freír patatas hasta dorar y servir con salsa brava picante de tomate y pimentón.",
+    "proceso_detallado": [
+      "1. Pelar y cortar las patatas en cubos irregulares.",
+      "2. Freír en aceite abundante hasta dorar. Reservar sobre papel absorbente.",
+      "3. Para la salsa: sofreír ajo en aceite, añadir pimentón y cayena sin que se queme.",
+      "4. Añadir tomate triturado y un chorrito de vinagre. Cocinar 10 min.",
+      "5. Triturar la salsa y salpimentar.",
+      "6. Servir las patatas con la salsa por encima bien caliente."
+    ]
+  },
+  {
+    "receta_id": 245,
+    "nombre": "ensaladilla rusa",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "patata",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "zanahoria",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "huevo",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "atún en lata",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "mayonesa",
+      "sal",
+      "aceitunas",
+      "pepinillo"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 40,
+    "calorias_aprox": 380,
+    "tags": [
+      "tapa",
+      "tradicional",
+      "verano",
+      "frio"
+    ],
+    "proceso_corto": "Cocer patata, zanahoria y huevo. Picar todo, mezclar con atún y mayonesa.",
+    "proceso_detallado": [
+      "1. Cocer las patatas y zanahorias peladas en agua con sal hasta que estén tiernas.",
+      "2. Cocer los huevos 10 minutos en agua hirviendo.",
+      "3. Dejar enfriar todo, pelar y cortar en cubitos pequeños.",
+      "4. Mezclar con el atún escurrido y abundante mayonesa.",
+      "5. Rectificar de sal y refrigerar al menos 1 hora.",
+      "6. Decorar con aceitunas, huevo en rodajas y pimiento del piquillo."
+    ]
+  },
+  {
+    "receta_id": 246,
+    "nombre": "gambas al ajillo",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "gambas",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 6,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "guindilla",
+      "sal",
+      "perejil",
+      "vino blanco"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 15,
+    "calorias_aprox": 250,
+    "tags": [
+      "tapa",
+      "marisco",
+      "rapido",
+      "tradicional"
+    ],
+    "proceso_corto": "Calentar aceite con ajo y guindilla, añadir gambas y cocinar brevemente a fuego fuerte.",
+    "proceso_detallado": [
+      "1. Pelar las gambas dejando la cola. Limpiar y secar bien.",
+      "2. Laminar los ajos y cortar la guindilla en trozos.",
+      "3. Calentar aceite de oliva en cazuela de barro a fuego medio.",
+      "4. Añadir ajo y guindilla, dorar ligeramente sin que se queme.",
+      "5. Subir el fuego, añadir las gambas y saltear 2-3 minutos.",
+      "6. Añadir perejil picado, sal y un chorrito de vino blanco. Servir en la misma cazuela."
+    ]
+  },
+  {
+    "receta_id": 247,
+    "nombre": "bacalao a la vizcaina",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "bacalao",
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "item": "cebolla",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento choricero",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "ajo",
+      "sal",
+      "pan"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 90,
+    "calorias_aprox": 380,
+    "tags": [
+      "tradicional",
+      "pais vasco",
+      "pescado",
+      "domingo"
+    ],
+    "proceso_corto": "Desalar bacalao, preparar salsa vizcaína con cebolla y pimiento choricero, confitar el bacalao en la salsa.",
+    "proceso_detallado": [
+      "1. Desalar el bacalao 48h cambiando el agua varias veces.",
+      "2. Hidratar los pimientos choriceros en agua caliente 30 min. Raspar la pulpa.",
+      "3. Pochar la cebolla muy lentamente en aceite durante 40 minutos.",
+      "4. Añadir tomate y pulpa de choricero, cocinar 20 min más.",
+      "5. Triturar y tamizar la salsa. Salpimentar.",
+      "6. Confitar el bacalao en aceite a 70°C, 10 min. Emplatar sobre la salsa."
+    ]
+  },
+  {
+    "receta_id": 248,
+    "nombre": "lentejas con chorizo",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "lenteja",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "zanahoria",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "ajo",
+      "pimentón",
+      "laurel",
+      "sal",
+      "aceite",
+      "tomate"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 60,
+    "calorias_aprox": 480,
+    "tags": [
+      "cuchara",
+      "invierno",
+      "economico",
+      "tradicional"
+    ],
+    "proceso_corto": "Sofreír verduras, añadir lentejas, chorizo y agua. Cocer hasta que estén tiernas.",
+    "proceso_detallado": [
+      "1. Pochar la cebolla y ajo picados en aceite.",
+      "2. Añadir zanahoria en rodajas, pimentón y tomate triturado.",
+      "3. Incorporar las lentejas (sin remojo necesario si son pardinas), chorizo en rodajas y laurel.",
+      "4. Cubrir con agua o caldo, llevar a hervir y cocinar 35-40 minutos a fuego medio.",
+      "5. Rectificar de sal y textura. Si sobran muy caldosas, triturar un poco.",
+      "6. Reposar 5 minutos tapadas antes de servir."
+    ]
+  },
+  {
+    "receta_id": 249,
+    "nombre": "almejas a la marinera",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "almejas",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 3,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vino blanco",
+      "harina",
+      "perejil",
+      "sal",
+      "pimentón"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 25,
+    "calorias_aprox": 200,
+    "tags": [
+      "marisco",
+      "tapa",
+      "rapido"
+    ],
+    "proceso_corto": "Sofreír cebolla y ajo, añadir harina y vino, incorporar almejas hasta que abran.",
+    "proceso_detallado": [
+      "1. Poner las almejas en agua fría con sal para que expulsen la arena.",
+      "2. Pochar la cebolla y ajo finamente picados en aceite de oliva.",
+      "3. Añadir una cucharada de harina y tostar ligeramente.",
+      "4. Incorporar pimentón y vino blanco, remover hasta integrar.",
+      "5. Añadir las almejas y perejil picado. Tapar y cocinar hasta que abran.",
+      "6. Servir inmediatamente con pan para mojar en la salsa."
+    ]
+  },
+  {
+    "receta_id": 250,
+    "nombre": "pollo al ajillo",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pollo",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 10,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vino blanco",
+      "laurel",
+      "sal",
+      "pimienta",
+      "romero"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 45,
+    "calorias_aprox": 420,
+    "tags": [
+      "tradicional",
+      "pollo",
+      "ajo"
+    ],
+    "proceso_corto": "Dorar el pollo con ajo, añadir vino y hierbas, cocinar hasta que esté tierno.",
+    "proceso_detallado": [
+      "1. Trocear el pollo y salpimentar.",
+      "2. Dorar el pollo en aceite caliente por todos lados hasta que quede bien tostado.",
+      "3. Añadir los ajos enteros con piel y dorar.",
+      "4. Incorporar el vino blanco, laurel y romero.",
+      "5. Cocinar tapado a fuego medio-bajo 25-30 minutos.",
+      "6. Servir el pollo con los ajos y la salsa reducida por encima."
+    ]
+  },
+  {
+    "receta_id": 251,
+    "nombre": "merluza en salsa verde",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "merluza",
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "perejil",
+        "qty": 1,
+        "unit": "manojo"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "harina",
+      "caldo de pescado",
+      "sal",
+      "vino blanco",
+      "almejas"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 30,
+    "calorias_aprox": 280,
+    "tags": [
+      "pescado",
+      "pais vasco",
+      "tradicional"
+    ],
+    "proceso_corto": "Dorar ajo, añadir harina y caldo, colocar la merluza en la salsa verde y cocinar suavemente.",
+    "proceso_detallado": [
+      "1. Cortar la merluza en lomos o rodajas, salpimentar.",
+      "2. Dorar los ajos laminados en aceite a fuego medio.",
+      "3. Añadir harina y tostar ligeramente, añadir vino blanco.",
+      "4. Incorporar el caldo de pescado poco a poco removiendo hasta obtener salsa ligera.",
+      "5. Añadir perejil picado abundante y las almejas si se usan.",
+      "6. Colocar el pescado y cocinar 8-10 min meneando la cazuela para ligar la salsa."
+    ]
+  },
+  {
+    "receta_id": 252,
+    "nombre": "albondigas en salsa tomate",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "carne picada",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate triturado",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "ajo",
+      "pan rallado",
+      "sal",
+      "pimienta",
+      "aceite",
+      "perejil",
+      "azúcar"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 50,
+    "calorias_aprox": 450,
+    "tags": [
+      "carne",
+      "tradicional",
+      "familiar"
+    ],
+    "proceso_corto": "Mezclar carne con huevo y pan rallado, formar albóndigas, freirlas y cocerlas en salsa de tomate.",
+    "proceso_detallado": [
+      "1. Mezclar la carne picada con huevo, ajo, perejil, pan rallado, sal y pimienta.",
+      "2. Formar albóndigas del tamaño de una nuez.",
+      "3. Pasar por harina y dorar en aceite caliente. Reservar.",
+      "4. En el mismo aceite, pochar cebolla y ajo picados.",
+      "5. Añadir tomate triturado, sal y azúcar. Cocinar la salsa 15 minutos.",
+      "6. Incorporar las albóndigas a la salsa y cocinar 20 minutos a fuego lento."
+    ]
+  },
+  {
+    "receta_id": 253,
+    "nombre": "espinacas con garbanzos",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "espinacas",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "garbanzos cocidos",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "pan",
+        "qty": 2,
+        "unit": "rebanada"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "pimentón",
+      "comino",
+      "vinagre",
+      "sal",
+      "cebolla"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 30,
+    "calorias_aprox": 320,
+    "tags": [
+      "vegetariano",
+      "vegan",
+      "andalucia",
+      "tradicional"
+    ],
+    "proceso_corto": "Freír pan y ajo, majar con especias, saltear espinacas y garbanzos con el majado.",
+    "proceso_detallado": [
+      "1. Freír el pan y los ajos en aceite hasta dorar. Reservar.",
+      "2. En el mismo aceite, pochar la cebolla picada.",
+      "3. Añadir las espinacas y saltear hasta que se marchiten.",
+      "4. Majar el pan frito con ajo, pimentón, comino y vinagre hasta obtener pasta.",
+      "5. Incorporar los garbanzos y el majado a las espinacas.",
+      "6. Añadir un poco de agua o caldo, mezclar bien y cocinar 10 minutos."
+    ]
+  },
+  {
+    "receta_id": 254,
+    "nombre": "arroz con leche",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "arroz",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "leche",
+        "qty": 1000,
+        "unit": "ml"
+      },
+      {
+        "item": "azucar",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "canela en rama",
+      "piel de limón",
+      "canela molida"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 50,
+    "calorias_aprox": 280,
+    "tags": [
+      "postre",
+      "tradicional",
+      "asturias"
+    ],
+    "proceso_corto": "Cocer arroz en leche con canela y limón a fuego lento hasta que absorba todo. Enfriar y espolvorear canela.",
+    "proceso_detallado": [
+      "1. Calentar la leche con la canela en rama y la piel de limón.",
+      "2. Añadir el arroz cuando la leche esté caliente.",
+      "3. Cocinar a fuego muy lento removiendo frecuentemente durante 40 minutos.",
+      "4. Añadir el azúcar en los últimos 10 minutos de cocción.",
+      "5. Retirar la canela y la piel de limón.",
+      "6. Verter en cazuelitas, espolvorear canela molida y enfriar en nevera."
+    ]
+  },
+  {
+    "receta_id": 255,
+    "nombre": "natillas caseras",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "leche",
+        "qty": 500,
+        "unit": "ml"
+      },
+      {
+        "item": "yema de huevo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "azucar",
+        "qty": 80,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "canela en rama",
+      "piel de limón",
+      "maicena",
+      "galleta maria",
+      "canela molida"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 30,
+    "calorias_aprox": 220,
+    "tags": [
+      "postre",
+      "tradicional",
+      "casero"
+    ],
+    "proceso_corto": "Infusionar leche, batir yemas con azúcar y maicena, mezclar y cocer sin hervir hasta espesar.",
+    "proceso_detallado": [
+      "1. Calentar la leche con canela y piel de limón sin que hierva. Dejar infusionar.",
+      "2. Batir las yemas con el azúcar hasta blanquear.",
+      "3. Añadir la maicena a las yemas y mezclar bien.",
+      "4. Incorporar la leche caliente poco a poco sobre las yemas batiendo constantemente.",
+      "5. Devolver a fuego lento, remover sin parar hasta que espese. No dejar hervir.",
+      "6. Verter en cuencos, poner galleta maría y espolvorear canela. Enfriar en nevera."
+    ]
+  },
+  {
+    "receta_id": 256,
+    "nombre": "flan de huevo",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "huevo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "leche",
+        "qty": 500,
+        "unit": "ml"
+      },
+      {
+        "item": "azucar",
+        "qty": 150,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "vainilla"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 60,
+    "calorias_aprox": 250,
+    "tags": [
+      "postre",
+      "tradicional",
+      "horno"
+    ],
+    "proceso_corto": "Hacer caramelo, batir huevos con leche y azúcar, hornear al baño maría.",
+    "proceso_detallado": [
+      "1. Hacer caramelo con 75g de azúcar en sartén hasta que dore. Verter en moldes.",
+      "2. Calentar la leche con la vainilla.",
+      "3. Batir los huevos con el azúcar restante.",
+      "4. Mezclar la leche caliente con los huevos suavemente.",
+      "5. Verter sobre el caramelo en los moldes.",
+      "6. Hornear al baño maría a 160°C unos 45 minutos. Enfriar y desmoldar."
+    ]
+  },
+  {
+    "receta_id": 257,
+    "nombre": "leche frita",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "leche",
+        "qty": 500,
+        "unit": "ml"
+      },
+      {
+        "item": "harina",
+        "qty": 80,
+        "unit": "g"
+      },
+      {
+        "item": "azucar",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "canela en rama",
+      "piel de limón",
+      "canela molida",
+      "aceite",
+      "azúcar glass"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 60,
+    "calorias_aprox": 300,
+    "tags": [
+      "postre",
+      "tradicional",
+      "frito"
+    ],
+    "proceso_corto": "Preparar crema espesa de leche, dejar enfriar, cortar en cuadrados, empanar y freír.",
+    "proceso_detallado": [
+      "1. Calentar la leche con canela y limón para infusionar.",
+      "2. Mezclar harina y azúcar, añadir leche caliente poco a poco batiendo.",
+      "3. Cocer a fuego lento removiendo hasta obtener crema muy espesa.",
+      "4. Verter en bandeja engrasada, enfriar y refrigerar 2 horas.",
+      "5. Cortar en cuadrados, pasar por huevo batido y freír hasta dorar.",
+      "6. Escurrir, espolvorear con azúcar y canela. Servir caliente."
+    ]
+  },
+  {
+    "receta_id": 258,
+    "nombre": "porra antequerana",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "tomate",
+        "qty": 800,
+        "unit": "g"
+      },
+      {
+        "item": "pimiento rojo",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "pan",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vinagre",
+      "sal",
+      "huevo",
+      "atún"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 20,
+    "calorias_aprox": 200,
+    "tags": [
+      "frio",
+      "verano",
+      "andalucia",
+      "tradicional"
+    ],
+    "proceso_corto": "Triturar tomate, pimiento, pan, ajo y aceite hasta crema densa. Servir con atún y huevo.",
+    "proceso_detallado": [
+      "1. Asar el pimiento rojo en horno o directamente en fuego.",
+      "2. Remojar el pan en agua fría y escurrir.",
+      "3. Triturar tomate, pimiento asado, pan, ajo con aceite y vinagre.",
+      "4. Debe quedar una crema densa y homogénea. Rectificar sal.",
+      "5. Refrigerar hasta el momento de servir.",
+      "6. Servir en cuencos con atún y huevo duro picado por encima."
+    ]
+  },
+  {
+    "receta_id": 259,
+    "nombre": "migas extremeñas",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pan",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 4,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal",
+      "pimentón",
+      "bacon"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 40,
+    "calorias_aprox": 520,
+    "tags": [
+      "tradicional",
+      "extremadura",
+      "contundente",
+      "desayuno"
+    ],
+    "proceso_corto": "Desmigar el pan del día anterior, freír con ajo y chorizo, remover constantemente hasta que estén sueltas y doradas.",
+    "proceso_detallado": [
+      "1. Desmigar el pan del día anterior en trozos irregulares, humedecer ligeramente con agua.",
+      "2. Dorar los ajos en aceite abundante. Retirar y reservar.",
+      "3. Freír el chorizo en rodajas en el mismo aceite.",
+      "4. Añadir el pan y remover constantemente con cuchara de madera.",
+      "5. Cocinar a fuego medio hasta que las migas estén doradas y sueltas.",
+      "6. Incorporar pimentón, sal y servir con los ajos y chorizo por encima."
+    ]
+  },
+  {
+    "receta_id": 260,
+    "nombre": "berenjenas con miel",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "berenjena",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "miel",
+        "qty": 3,
+        "unit": "tbsp"
+      }
+    ],
+    "ingredientes_base": [
+      "harina",
+      "aceite",
+      "sal",
+      "azúcar"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 30,
+    "calorias_aprox": 280,
+    "tags": [
+      "tapa",
+      "cordoba",
+      "andalucia",
+      "vegetariano"
+    ],
+    "proceso_corto": "Cortar berenjenas, salar, enharinar y freír. Servir con miel de caña por encima.",
+    "proceso_detallado": [
+      "1. Cortar las berenjenas en rodajas o bastones. Salar y dejar reposar 20 minutos para que suelten el amargor.",
+      "2. Lavar y secar bien las berenjenas.",
+      "3. Pasar por harina sacudiendo el exceso.",
+      "4. Freír en aceite abundante y caliente hasta que estén doradas.",
+      "5. Escurrir sobre papel absorbente.",
+      "6. Servir inmediatamente con un buen chorro de miel de caña por encima."
+    ]
+  },
+  {
+    "receta_id": 261,
+    "nombre": "potaje de vigilia",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "garbanzos",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "espinacas",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "bacalao",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "ajo",
+      "cebolla",
+      "tomate",
+      "pimentón",
+      "comino",
+      "sal",
+      "aceite"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 90,
+    "calorias_aprox": 400,
+    "tags": [
+      "semana santa",
+      "tradicional",
+      "cuchara",
+      "pescado"
+    ],
+    "proceso_corto": "Cocer garbanzos, añadir espinacas y bacalao desalado. Preparar refrito con especias y añadir.",
+    "proceso_detallado": [
+      "1. Desalar el bacalao 48 horas cambiando el agua.",
+      "2. Cocer los garbanzos remojados con cebolla y ajo.",
+      "3. A mitad de cocción añadir las espinacas.",
+      "4. Hacer un sofrito con cebolla, ajo, tomate y pimentón.",
+      "5. Añadir el sofrito a los garbanzos junto al bacalao desmigado.",
+      "6. Cocer los huevos aparte y añadir en cuartos al servir."
+    ]
+  },
+  {
+    "receta_id": 262,
+    "nombre": "caldo gallego",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "grelos",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "patata",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "judias blancas",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "lacón",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "chorizo",
+      "sal",
+      "aceite"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 120,
+    "calorias_aprox": 380,
+    "tags": [
+      "galicia",
+      "invierno",
+      "cuchara",
+      "tradicional"
+    ],
+    "proceso_corto": "Cocer juntos judías, lacón y chorizo. Añadir patatas y grelos. Cocer hasta que todo esté tierno.",
+    "proceso_detallado": [
+      "1. Poner en remojo las judías blancas la noche anterior.",
+      "2. Cocer el lacón y chorizo en agua abundante con sal.",
+      "3. Añadir las judías escurridas y cocer a fuego lento.",
+      "4. Incorporar las patatas troceadas y los grelos o nabizas.",
+      "5. Cocinar hasta que patatas y judías estén tiernas, unos 30 min más.",
+      "6. Rectificar de sal y servir bien caliente."
+    ]
+  },
+  {
+    "receta_id": 263,
+    "nombre": "gazpachuelo malagueno",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "merluza",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "patata",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "huevo",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "gambas",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "ajo",
+      "limón",
+      "sal"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 40,
+    "calorias_aprox": 320,
+    "tags": [
+      "malaga",
+      "andalucia",
+      "pescado",
+      "sopa",
+      "tradicional"
+    ],
+    "proceso_corto": "Cocer patatas y pescado en caldo. Hacer mayonesa con el caldo y añadir al guiso.",
+    "proceso_detallado": [
+      "1. Hacer un caldo ligero con las cabezas de las gambas.",
+      "2. Cocer las patatas en el caldo junto con la merluza y las gambas.",
+      "3. Retirar el pescado y gambas, reservar las patatas.",
+      "4. Hacer una mayonesa con el huevo, ajo, aceite y limón.",
+      "5. Añadir caldo caliente poco a poco a la mayonesa batiendo para que no se corte.",
+      "6. Añadir las patatas, pescado y gambas. Servir caliente."
+    ]
+  },
+  {
+    "receta_id": 264,
+    "nombre": "pimientos del piquillo rellenos",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pimiento del piquillo",
+        "qty": 12,
+        "unit": "ud"
+      },
+      {
+        "item": "bacalao",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "leche",
+        "qty": 200,
+        "unit": "ml"
+      }
+    ],
+    "ingredientes_base": [
+      "ajo",
+      "harina",
+      "aceite",
+      "sal",
+      "perejil"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 60,
+    "calorias_aprox": 310,
+    "tags": [
+      "pais vasco",
+      "navarra",
+      "tradicional",
+      "pescado"
+    ],
+    "proceso_corto": "Desalar bacalao, preparar relleno con bechamel. Rellenar los piquillos y gratinar.",
+    "proceso_detallado": [
+      "1. Desalar el bacalao y desmigar. Reservar.",
+      "2. Preparar una bechamel espesa con la leche, harina y cebolla pochada.",
+      "3. Añadir el bacalao a la bechamel y mezclar bien.",
+      "4. Rellenar con cuidado cada pimiento.",
+      "5. Preparar salsa con el jugo de los pimientos y un poco de nata.",
+      "6. Colocar los pimientos en cazuela con la salsa y gratinar 10 minutos."
+    ]
+  },
+  {
+    "receta_id": 265,
+    "nombre": "carne con tomate andaluza",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "carne de cerdo",
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "item": "tomate",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "ajo",
+      "aceite",
+      "sal",
+      "pimienta",
+      "vino blanco",
+      "laurel"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 60,
+    "calorias_aprox": 440,
+    "tags": [
+      "andalucia",
+      "tradicional",
+      "carne"
+    ],
+    "proceso_corto": "Dorar la carne, sofreír verduras, añadir tomate y vino, cocinar a fuego lento.",
+    "proceso_detallado": [
+      "1. Trocear la carne y salpimentar.",
+      "2. Dorar bien la carne en aceite caliente. Reservar.",
+      "3. Pochar en el mismo aceite la cebolla, pimiento y ajo picados.",
+      "4. Añadir los tomates troceados y cocinar 10 minutos.",
+      "5. Incorporar la carne, vino blanco y laurel.",
+      "6. Cocinar tapado a fuego lento 40 minutos hasta que la carne esté tierna."
+    ]
+  },
+  {
+    "receta_id": 266,
+    "nombre": "rabo de toro",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "rabo de toro",
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "item": "cebolla",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "zanahoria",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "vino tinto",
+      "ajo",
+      "laurel",
+      "tomillo",
+      "pimienta",
+      "sal",
+      "aceite"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 180,
+    "calorias_aprox": 580,
+    "tags": [
+      "andalucia",
+      "cordoba",
+      "tradicional",
+      "carne",
+      "guiso"
+    ],
+    "proceso_corto": "Marinar el rabo en vino, dorar y cocer a fuego muy lento durante horas hasta que se desprenda del hueso.",
+    "proceso_detallado": [
+      "1. Marinar el rabo troceado con el vino tinto y verduras 12 horas.",
+      "2. Escurrir y secar bien. Dorar en aceite caliente por todos lados.",
+      "3. En el mismo aceite sofreír las verduras de la marinada.",
+      "4. Añadir el vino de la marinada y reducir a la mitad.",
+      "5. Cubrir con agua o caldo, tapar y cocinar 3 horas a fuego muy lento.",
+      "6. Desgrasar el caldo, triturar la salsa y servir la carne bañada en ella."
+    ]
+  },
+  {
+    "receta_id": 267,
+    "nombre": "olla podrida burgalesa",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "alubias rojas",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "morcilla",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "oreja de cerdo",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "cebolla",
+      "ajo",
+      "pimentón",
+      "sal",
+      "aceite",
+      "laurel"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 180,
+    "calorias_aprox": 620,
+    "tags": [
+      "castilla leon",
+      "burgos",
+      "invierno",
+      "contundente",
+      "cuchara"
+    ],
+    "proceso_corto": "Cocer alubias con el compango a fuego lento hasta que todo esté tierno y el caldo espeso.",
+    "proceso_detallado": [
+      "1. Remojar las alubias la noche anterior.",
+      "2. Cocer la oreja de cerdo 30 minutos en agua. Escurrir.",
+      "3. Poner alubias, oreja, chorizo y morcilla en olla con agua fría.",
+      "4. Añadir cebolla, ajo y laurel. Llevar a ebullición.",
+      "5. Cocinar a fuego lento 2 horas, añadiendo agua fría si es necesario para no romper las alubias.",
+      "6. Ajustar sal y servir en dos vuelcos: caldo con pan y alubias con carnes."
+    ]
+  },
+  {
+    "receta_id": 268,
+    "nombre": "pote asturiano",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "berza",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "patata",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "alubias blancas",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "lacón",
+      "tocino",
+      "sal",
+      "ajo"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 150,
+    "calorias_aprox": 500,
+    "tags": [
+      "asturias",
+      "invierno",
+      "cuchara",
+      "tradicional"
+    ],
+    "proceso_corto": "Cocer todos los ingredientes juntos a fuego lento hasta que la berza y las alubias estén tiernas.",
+    "proceso_detallado": [
+      "1. Remojar las alubias la noche anterior.",
+      "2. Poner en olla grande las alubias, chorizo, lacón y tocino con agua abundante.",
+      "3. Cocer a fuego lento durante 1 hora.",
+      "4. Añadir la berza troceada y las patatas peladas y cortadas.",
+      "5. Cocinar 45 minutos más hasta que todo esté tierno.",
+      "6. Rectificar sal y servir muy caliente."
+    ]
+  },
+  {
+    "receta_id": 269,
+    "nombre": "fideos a la cazuela",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "fideos gruesos",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "sepia",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 3,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "pimentón",
+      "caldo de pescado",
+      "sal",
+      "perejil",
+      "azafrán"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 45,
+    "calorias_aprox": 420,
+    "tags": [
+      "cataluña",
+      "catalán",
+      "pescado",
+      "tradicional"
+    ],
+    "proceso_corto": "Sofreír sepia con tomate, añadir fideos y caldo. Hornear hasta que los fideos queden dorados.",
+    "proceso_detallado": [
+      "1. Sofreír los ajos en aceite, añadir la sepia troceada y rehogar.",
+      "2. Incorporar el tomate rallado y pimentón. Cocinar hasta que se evapore el agua.",
+      "3. Añadir los fideos y tostar ligeramente.",
+      "4. Verter el caldo de pescado caliente con azafrán. Ajustar sal.",
+      "5. Hornear a 200°C unos 15 minutos hasta que los fideos queden al dente y ligeramente dorados.",
+      "6. Servir con alioli aparte."
+    ]
+  },
+  {
+    "receta_id": 270,
+    "nombre": "alioli",
+    "categoria": "salsa",
+    "tipo": "complemento",
+    "ingredientes_clave": [
+      {
+        "item": "ajo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "aceite de oliva",
+        "qty": 200,
+        "unit": "ml"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "limón"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 15,
+    "calorias_aprox": 400,
+    "tags": [
+      "cataluña",
+      "salsa",
+      "tradicional",
+      "vegetariano"
+    ],
+    "proceso_corto": "Majar el ajo en mortero con sal, añadir aceite muy lentamente hasta emulsionar.",
+    "proceso_detallado": [
+      "1. Pelar los ajos y machacarlos en mortero con sal hasta obtener pasta.",
+      "2. Añadir aceite de oliva gota a gota sin parar de mover el mortero en círculos.",
+      "3. Continuar añadiendo aceite en hilo fino hasta obtener la textura deseada.",
+      "4. Añadir unas gotas de limón para estabilizar.",
+      "5. Si se corta, empezar de nuevo con un nuevo ajo y añadir la mezcla cortada poco a poco."
+    ]
+  },
+  {
+    "receta_id": 271,
+    "nombre": "torrijas",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pan del dia anterior",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "leche",
+        "qty": 500,
+        "unit": "ml"
+      },
+      {
+        "item": "huevo",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "azucar",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "canela en rama",
+      "piel de limón",
+      "aceite",
+      "canela molida",
+      "miel"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 30,
+    "calorias_aprox": 350,
+    "tags": [
+      "postre",
+      "semana santa",
+      "tradicional"
+    ],
+    "proceso_corto": "Empapar pan en leche aromatizada, pasar por huevo y freír. Rebozar en azúcar y canela.",
+    "proceso_detallado": [
+      "1. Calentar leche con canela, limón y azúcar. Dejar templar.",
+      "2. Cortar el pan en rebanadas gruesas y empapar en la leche.",
+      "3. Dejar reposar las rebanadas empapadas en la leche 15 minutos por cada lado.",
+      "4. Pasar por huevo batido.",
+      "5. Freír en aceite caliente hasta dorar por ambos lados.",
+      "6. Escurrir y rebozar en mezcla de azúcar y canela molida. Servir con miel."
+    ]
+  },
+  {
+    "receta_id": 272,
+    "nombre": "churros con chocolate",
+    "categoria": "desayuno",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "harina",
+        "qty": 250,
+        "unit": "g"
+      },
+      {
+        "item": "agua",
+        "qty": 250,
+        "unit": "ml"
+      },
+      {
+        "item": "chocolate negro",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "leche",
+        "qty": 400,
+        "unit": "ml"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "aceite",
+      "azúcar",
+      "canela",
+      "maicena"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 30,
+    "calorias_aprox": 420,
+    "tags": [
+      "desayuno",
+      "tradicional",
+      "mañana",
+      "postre"
+    ],
+    "proceso_corto": "Preparar masa de churros, freír en forma de tira. Preparar chocolate caliente espeso.",
+    "proceso_detallado": [
+      "1. Hervir agua con sal. Añadir harina de golpe y remover hasta obtener masa.",
+      "2. Meter la masa en manga con boca de estrella.",
+      "3. Freír en aceite abundante formando tiras o espirales hasta dorar.",
+      "4. Para el chocolate: disolver maicena en leche fría, calentar con chocolate troceado.",
+      "5. Remover constantemente hasta que espese.",
+      "6. Servir los churros escurridos con el chocolate caliente para mojar."
+    ]
+  },
+  {
+    "receta_id": 273,
+    "nombre": "pan con tomate",
+    "categoria": "desayuno",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pan",
+        "qty": 4,
+        "unit": "rebanada"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal",
+      "ajo"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 5,
+    "calorias_aprox": 200,
+    "tags": [
+      "cataluña",
+      "desayuno",
+      "rapido",
+      "vegetariano",
+      "vegan",
+      "tradicional"
+    ],
+    "proceso_corto": "Tostar pan, frotar con ajo y tomate maduro, aliñar con aceite y sal.",
+    "proceso_detallado": [
+      "1. Tostar las rebanadas de pan en tostadora o plancha.",
+      "2. Frotar ligeramente con ajo crudo partido por la mitad.",
+      "3. Frotar el tomate maduro partido por la mitad hasta que se impregne toda la miga.",
+      "4. Añadir un buen chorro de aceite de oliva virgen extra.",
+      "5. Salar al gusto y servir inmediatamente."
+    ]
+  },
+  {
+    "receta_id": 274,
+    "nombre": "boquerones en vinagre",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "boquerones",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "vinagre",
+        "qty": 200,
+        "unit": "ml"
+      },
+      {
+        "item": "ajo",
+        "qty": 4,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "perejil",
+      "sal"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 20,
+    "calorias_aprox": 220,
+    "tags": [
+      "tapa",
+      "pescado",
+      "frio",
+      "tradicional"
+    ],
+    "proceso_corto": "Limpiar boquerones, marinar en vinagre 4-8 horas, aliñar con aceite, ajo y perejil.",
+    "proceso_detallado": [
+      "1. Limpiar los boquerones: quitar cabeza, espina y eviscerar.",
+      "2. Lavar bien y secar. Congelar 48h previamente para seguridad alimentaria.",
+      "3. Descongelar y disponer en bandeja. Cubrir con vinagre y sal.",
+      "4. Dejar marinar en nevera entre 4 y 8 horas hasta que estén blancos.",
+      "5. Escurrir bien el vinagre.",
+      "6. Aliñar con aceite de oliva, ajo laminado y perejil picado. Refrigerar hasta servir."
+    ]
+  },
+  {
+    "receta_id": 275,
+    "nombre": "calamares a la romana",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "calamar",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "harina",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "aceite",
+      "limón"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 25,
+    "calorias_aprox": 320,
+    "tags": [
+      "tapa",
+      "marisco",
+      "frito",
+      "bocadillo"
+    ],
+    "proceso_corto": "Cortar calamares en anillas, pasar por harina y huevo, freír en aceite muy caliente.",
+    "proceso_detallado": [
+      "1. Limpiar los calamares y cortar en anillas de 1 cm.",
+      "2. Secar bien con papel absorbente.",
+      "3. Pasar las anillas por harina, sacudiendo el exceso.",
+      "4. Pasar por huevo batido con sal.",
+      "5. Freír en aceite abundante muy caliente hasta que estén doradas.",
+      "6. Escurrir sobre papel, salar y servir con limón."
+    ]
+  },
+  {
+    "receta_id": 276,
+    "nombre": "ensalada de pimientos asados",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pimiento rojo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal",
+      "vinagre"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 60,
+    "calorias_aprox": 150,
+    "tags": [
+      "ensalada",
+      "vegetariano",
+      "vegan",
+      "verano",
+      "asado"
+    ],
+    "proceso_corto": "Asar pimientos en horno, pelar y trocear. Aliñar con aceite, ajo y sal.",
+    "proceso_detallado": [
+      "1. Colocar los pimientos enteros en bandeja de horno con un poco de aceite.",
+      "2. Hornear a 200°C unos 45 minutos dando la vuelta a mitad.",
+      "3. Sacar y tapar con film para que suden. Dejar templar.",
+      "4. Pelar, retirar semillas y cortar en tiras.",
+      "5. Mezclar con tomate asado pelado, ajo laminado, aceite y sal.",
+      "6. Dejar marinar en nevera al menos 30 minutos antes de servir."
+    ]
+  },
+  {
+    "receta_id": 277,
+    "nombre": "costillas a la miel",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "costilla de cerdo",
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "item": "miel",
+        "qty": 4,
+        "unit": "tbsp"
+      },
+      {
+        "item": "ajo",
+        "qty": 4,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "pimienta",
+      "limón",
+      "aceite",
+      "romero",
+      "mostaza"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 90,
+    "calorias_aprox": 560,
+    "tags": [
+      "carne",
+      "horno",
+      "cerdo"
+    ],
+    "proceso_corto": "Marinar costillas con miel, ajo y especias. Hornear lentamente hasta que estén tiernas y glaseadas.",
+    "proceso_detallado": [
+      "1. Mezclar miel, ajo machacado, mostaza, limón, sal y pimienta.",
+      "2. Untar bien las costillas con la marinada.",
+      "3. Dejar marinar en nevera mínimo 2 horas (mejor toda la noche).",
+      "4. Colocar en bandeja y hornear a 180°C 60-75 minutos.",
+      "5. Durante la cocción, pincelar varias veces con la marinada sobrante.",
+      "6. Los últimos 10 minutos subir a 220°C para glasear bien."
+    ]
+  },
+  {
+    "receta_id": 278,
+    "nombre": "judias verdes con jamon",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "judia verde",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "jamon serrano",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 3,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 25,
+    "calorias_aprox": 180,
+    "tags": [
+      "guarnicion",
+      "tradicional",
+      "rapido"
+    ],
+    "proceso_corto": "Cocer las judías, escurrir y saltear con ajo y jamón en aceite de oliva.",
+    "proceso_detallado": [
+      "1. Limpiar las judías verdes, retirar los extremos y cortar en trozos.",
+      "2. Cocer en agua con sal hasta que estén al dente, unos 10-12 minutos.",
+      "3. Escurrir y reservar.",
+      "4. En sartén con aceite dorar el ajo laminado.",
+      "5. Añadir el jamón en tiras y saltear brevemente.",
+      "6. Incorporar las judías, saltear 2-3 minutos y servir."
+    ]
+  },
+  {
+    "receta_id": 279,
+    "nombre": "arroz a banda",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "arroz",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "sepia",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "gambas",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "ajo",
+      "pimentón",
+      "azafrán",
+      "sal",
+      "caldo de pescado"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 60,
+    "calorias_aprox": 480,
+    "tags": [
+      "alicante",
+      "comunidad valenciana",
+      "arroz",
+      "marisco",
+      "pescado"
+    ],
+    "proceso_corto": "Preparar caldo rico, sofreír mariscos con tomate, cocinar el arroz en el caldo. Servir con alioli.",
+    "proceso_detallado": [
+      "1. Hacer caldo con las cabezas de gambas, raspas y verduras.",
+      "2. Sofreír la sepia en la paella con ajo.",
+      "3. Añadir tomate rallado y pimentón, sofreír bien.",
+      "4. Añadir arroz y nacarar ligeramente.",
+      "5. Verter el caldo caliente con azafrán (doble que de arroz). Ajustar sal.",
+      "6. Cocinar 18-20 min sin remover. Servir con alioli aparte."
+    ]
+  },
+  {
+    "receta_id": 280,
+    "nombre": "arroz negro",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "arroz",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "sepia",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "tinta de calamar",
+        "qty": 2,
+        "unit": "sobre"
+      },
+      {
+        "item": "gambas",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite",
+      "ajo",
+      "cebolla",
+      "tomate",
+      "pimentón",
+      "caldo de pescado",
+      "sal"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 50,
+    "calorias_aprox": 460,
+    "tags": [
+      "cataluña",
+      "valenciana",
+      "arroz",
+      "marisco",
+      "tradicional"
+    ],
+    "proceso_corto": "Sofreír sepia, añadir tinta y caldo, incorporar arroz y cocinar hasta que absorba el caldo negro.",
+    "proceso_detallado": [
+      "1. Sofreír cebolla y ajo picados en aceite.",
+      "2. Añadir la sepia troceada y saltear hasta que cambie de color.",
+      "3. Incorporar tomate rallado y pimentón. Cocinar 5 minutos.",
+      "4. Disolver la tinta en el caldo caliente y añadir al sofrito.",
+      "5. Incorporar el arroz, mezclar y añadir más caldo si necesita.",
+      "6. Cocinar 18 min sin remover. Servir con alioli."
+    ]
+  },
+  {
+    "receta_id": 281,
+    "nombre": "zarzuela de mariscos",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "mejillones",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "almejas",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "gambas",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "calamar",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "tomate",
+        "qty": 3,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "cebolla",
+      "ajo",
+      "vino blanco",
+      "pimentón",
+      "azafrán",
+      "aceite",
+      "sal",
+      "perejil"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 45,
+    "calorias_aprox": 320,
+    "tags": [
+      "marisco",
+      "cataluña",
+      "fiesta",
+      "pescado"
+    ],
+    "proceso_corto": "Sofreír verduras, añadir mariscos por orden de cocción, glasear con vino y tomate.",
+    "proceso_detallado": [
+      "1. Pochar cebolla y ajo en aceite. Añadir tomate y pimentón.",
+      "2. Incorporar los calamares troceados y cocinar 10 minutos.",
+      "3. Añadir el vino blanco y el azafrán. Dejar evaporar el alcohol.",
+      "4. Incorporar las gambas, almejas y mejillones.",
+      "5. Tapar y cocinar hasta que los mariscos se abran.",
+      "6. Rectificar sal, añadir perejil y servir inmediatamente."
+    ]
+  },
+  {
+    "receta_id": 282,
+    "nombre": "puchero canario",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "garbanzos",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "pollo",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "maza de cerdo",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "maiz",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "zanahoria",
+      "cebolla",
+      "ajo",
+      "calabaza",
+      "col",
+      "sal",
+      "laurel"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 150,
+    "calorias_aprox": 500,
+    "tags": [
+      "canarias",
+      "tradicional",
+      "cuchara",
+      "completo"
+    ],
+    "proceso_corto": "Cocer las carnes y garbanzos en caldo. Añadir verduras y cocinar hasta que todo esté tierno.",
+    "proceso_detallado": [
+      "1. Remojar los garbanzos la noche anterior.",
+      "2. Poner a cocer las carnes en agua fría con sal.",
+      "3. Añadir los garbanzos cuando rompa a hervir.",
+      "4. Incorporar las verduras troceadas y el maíz.",
+      "5. Cocinar a fuego lento hasta que todo esté tierno.",
+      "6. Servir el caldo solo como sopa y las carnes con garbanzos y verduras aparte."
+    ]
+  },
+  {
+    "receta_id": 283,
+    "nombre": "papas arrugadas con mojo",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "patata",
+        "qty": 800,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 5,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento rojo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "sal gruesa",
+      "aceite de oliva",
+      "vinagre",
+      "comino",
+      "pimentón",
+      "cayena"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 40,
+    "calorias_aprox": 280,
+    "tags": [
+      "canarias",
+      "tradicional",
+      "tapa"
+    ],
+    "proceso_corto": "Cocer las patatas en agua muy salada hasta que la piel se arrugue. Servir con mojo rojo.",
+    "proceso_detallado": [
+      "1. Lavar las patatas sin pelar y cocer en agua con abundante sal (80g por litro).",
+      "2. Cuando estén cocidas, escurrir el agua y secar al fuego removiendo.",
+      "3. Para el mojo rojo: triturar pimiento rojo, ajo, comino, pimentón, vinagre y aceite.",
+      "4. Añadir cayena si se desea mojo picón.",
+      "5. Triturar hasta obtener salsa homogénea. Ajustar vinagre y sal.",
+      "6. Servir las patatas arrugadas con el mojo aparte para mojar."
+    ]
+  },
+  {
+    "receta_id": 284,
+    "nombre": "empanada gallega de atun",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "harina",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "atún en lata",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento rojo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "levadura",
+      "aceite",
+      "sal",
+      "huevo",
+      "agua",
+      "pimentón"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 120,
+    "calorias_aprox": 480,
+    "tags": [
+      "galicia",
+      "tradicional",
+      "horno",
+      "masa"
+    ],
+    "proceso_corto": "Preparar masa de empanada, hacer relleno de atún con sofrito de verduras y hornear.",
+    "proceso_detallado": [
+      "1. Preparar la masa mezclando harina, levadura, sal, aceite y agua templada. Amasar y reposar 30 min.",
+      "2. Sofreír cebolla y pimientos picados en aceite hasta pochar bien.",
+      "3. Añadir tomate frito, pimentón y el atún escurrido. Mezclar y enfriar.",
+      "4. Dividir la masa en dos. Estirar una parte y colocar en bandeja engrasada.",
+      "5. Extender el relleno, cubrir con la otra mitad de masa y sellar los bordes.",
+      "6. Pintar con huevo y hornear a 200°C unos 40 minutos hasta dorar."
+    ]
+  },
+  {
+    "receta_id": 285,
+    "nombre": "tarta de santiago",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "almendra molida",
+        "qty": 250,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "azucar",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "ralladura de limón",
+      "canela",
+      "mantequilla",
+      "azúcar glass"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 50,
+    "calorias_aprox": 380,
+    "tags": [
+      "postre",
+      "galicia",
+      "sin gluten",
+      "tradicional"
+    ],
+    "proceso_corto": "Mezclar almendra con huevos y azúcar, hornear y decorar con la cruz de Santiago.",
+    "proceso_detallado": [
+      "1. Batir los huevos con el azúcar hasta que blanqueen.",
+      "2. Añadir la almendra molida, canela y ralladura de limón. Mezclar bien.",
+      "3. Verter en molde redondo engrasado.",
+      "4. Hornear a 180°C unos 30-35 minutos.",
+      "5. Dejar enfriar completamente.",
+      "6. Decorar con azúcar glass usando como plantilla la cruz de Santiago."
+    ]
+  },
+  {
+    "receta_id": 286,
+    "nombre": "brazo de gitano",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "huevo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "azucar",
+        "qty": 120,
+        "unit": "g"
+      },
+      {
+        "item": "harina",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "item": "nata",
+        "qty": 300,
+        "unit": "ml"
+      }
+    ],
+    "ingredientes_base": [
+      "vainilla",
+      "azúcar glass"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 45,
+    "calorias_aprox": 320,
+    "tags": [
+      "postre",
+      "tradicional",
+      "horno"
+    ],
+    "proceso_corto": "Hornear bizcocho fino, enrollar con nata montada y decorar.",
+    "proceso_detallado": [
+      "1. Batir huevos con azúcar al baño maría hasta triplicar volumen.",
+      "2. Incorporar harina tamizada con movimientos envolventes.",
+      "3. Extender en bandeja con papel y hornear a 200°C, 10-12 minutos.",
+      "4. Desmoldar sobre paño húmedo con azúcar, enrollar y dejar enfriar.",
+      "5. Montar la nata con azúcar glass.",
+      "6. Desenrollar el bizcocho, extender la nata y volver a enrollar. Refrigerar."
+    ]
+  },
+  {
+    "receta_id": 287,
+    "nombre": "buñuelos de bacalao",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "bacalao",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "harina",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "levadura",
+      "ajo",
+      "perejil",
+      "sal",
+      "aceite",
+      "agua"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 40,
+    "calorias_aprox": 340,
+    "tags": [
+      "tapa",
+      "pescado",
+      "frito",
+      "semana santa"
+    ],
+    "proceso_corto": "Desalar bacalao, preparar masa con harina y huevo, incorporar el bacalao y freír.",
+    "proceso_detallado": [
+      "1. Desalar el bacalao 24 horas. Desmigar eliminando espinas.",
+      "2. Preparar una masa con harina, huevos, levadura, sal y agua hasta obtener masa semilíquida.",
+      "3. Añadir el bacalao desmigado, ajo y perejil picados.",
+      "4. Dejar reposar la masa 30 minutos.",
+      "5. Freír cucharadas de masa en aceite caliente hasta dorar.",
+      "6. Escurrir sobre papel y servir calientes."
+    ]
+  },
+  {
+    "receta_id": 288,
+    "nombre": "sopa de ajo",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "ajo",
+        "qty": 8,
+        "unit": "ud"
+      },
+      {
+        "item": "pan",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "jamon serrano",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "pimentón",
+      "sal",
+      "caldo de pollo"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 30,
+    "calorias_aprox": 300,
+    "tags": [
+      "castilla",
+      "invierno",
+      "cuchara",
+      "tradicional",
+      "economico"
+    ],
+    "proceso_corto": "Dorar ajo y pan con pimentón, añadir caldo y cocer los huevos directamente en la sopa.",
+    "proceso_detallado": [
+      "1. Dorar los ajos laminados en aceite de oliva.",
+      "2. Añadir el pan en rebanadas y tostar ligeramente.",
+      "3. Incorporar pimentón (sin que se queme), el jamón y el caldo caliente.",
+      "4. Dejar que el pan se empape y se deshaga ligeramente.",
+      "5. Cascar los huevos directamente en la sopa.",
+      "6. Cocer a fuego lento hasta que los huevos estén escalfados. Servir en cazuela de barro."
+    ]
+  },
+  {
+    "receta_id": 289,
+    "nombre": "ajoblanco malagueno",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "almendra cruda",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "pan",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vinagre",
+      "sal",
+      "agua fría",
+      "uvas"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 20,
+    "calorias_aprox": 350,
+    "tags": [
+      "malaga",
+      "andalucia",
+      "verano",
+      "frio",
+      "vegetariano"
+    ],
+    "proceso_corto": "Triturar almendras con pan, ajo, aceite y vinagre. Aligerar con agua fría. Servir con uvas.",
+    "proceso_detallado": [
+      "1. Remojar el pan en agua y escurrir.",
+      "2. Blanquear las almendras, escurrir y pelar.",
+      "3. Triturar almendras con ajo, pan remojado, aceite, vinagre y sal.",
+      "4. Añadir agua fría hasta conseguir la textura deseada.",
+      "5. Colar y refrigerar hasta que esté muy frío.",
+      "6. Servir bien frío con uvas peladas y un chorro de aceite."
+    ]
+  },
+  {
+    "receta_id": 290,
+    "nombre": "revuelto de trigueros",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "esparrago verde",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 15,
+    "calorias_aprox": 200,
+    "tags": [
+      "rapido",
+      "vegetariano",
+      "primavera"
+    ],
+    "proceso_corto": "Saltear espárragos con ajo, añadir huevo batido y revolver a fuego bajo hasta cuajar cremoso.",
+    "proceso_detallado": [
+      "1. Limpiar los espárragos, eliminar la parte dura y cortar en trozos.",
+      "2. Saltear en aceite de oliva con ajo laminado hasta que estén tiernos.",
+      "3. Bajar el fuego y añadir los huevos batidos con sal.",
+      "4. Remover suavemente con pala de madera hasta que el huevo cuaje cremoso.",
+      "5. Retirar del fuego antes de que estén del todo hechos (el calor residual termina la cocción).",
+      "6. Servir inmediatamente."
+    ]
+  },
+  {
+    "receta_id": 291,
+    "nombre": "callos a la madrileña",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "callos de ternera",
+        "qty": 800,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "morcilla",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "jamon serrano",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "cebolla",
+      "ajo",
+      "tomate",
+      "pimentón",
+      "guindilla",
+      "laurel",
+      "sal",
+      "aceite"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 240,
+    "calorias_aprox": 550,
+    "tags": [
+      "madrid",
+      "tradicional",
+      "invierno",
+      "contundente",
+      "offal"
+    ],
+    "proceso_corto": "Limpiar y cocer los callos varias horas. Preparar salsa con sofrito y especias. Cocer todo junto.",
+    "proceso_detallado": [
+      "1. Limpiar muy bien los callos con agua, limón y sal. Cocer en agua 2 horas. Escurrir.",
+      "2. Preparar sofrito con cebolla, ajo y tomate.",
+      "3. Añadir pimentón, guindilla y los embutidos troceados.",
+      "4. Incorporar los callos al sofrito con agua o caldo que los cubra.",
+      "5. Cocinar a fuego lento 1-2 horas más hasta que estén muy tiernos.",
+      "6. La salsa debe quedar espesa y rojiza. Rectificar sal."
+    ]
+  },
+  {
+    "receta_id": 292,
+    "nombre": "riñones al jerez",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "riñones de cerdo",
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 3,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "vino de jerez",
+      "aceite",
+      "sal",
+      "pimienta",
+      "perejil",
+      "harina"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 40,
+    "calorias_aprox": 300,
+    "tags": [
+      "andalucia",
+      "jerez",
+      "carne",
+      "tradicional"
+    ],
+    "proceso_corto": "Limpiar riñones, pochar cebolla y ajo, añadir riñones y glasear con jerez.",
+    "proceso_detallado": [
+      "1. Limpiar los riñones, quitar grasas y partes blancas, cortar en cubos.",
+      "2. Remojar en agua con sal y vinagre 30 minutos. Escurrir y secar.",
+      "3. Pochar la cebolla y ajo en aceite.",
+      "4. Añadir los riñones a fuego vivo y saltear 3 minutos.",
+      "5. Añadir la harina, remover y glasear con jerez.",
+      "6. Cocinar 10 minutos, salpimentar y añadir perejil."
+    ]
+  },
+  {
+    "receta_id": 293,
+    "nombre": "cochinillo asado segoviano",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "cochinillo",
+        "qty": 3000,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 4,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "manteca de cerdo",
+      "sal",
+      "agua",
+      "laurel",
+      "tomillo"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 180,
+    "calorias_aprox": 600,
+    "tags": [
+      "segovia",
+      "castilla leon",
+      "horno",
+      "tradicional",
+      "domingo"
+    ],
+    "proceso_corto": "Asar el cochinillo a baja temperatura largo tiempo. Subir al final para conseguir piel crujiente.",
+    "proceso_detallado": [
+      "1. Limpiar y secar bien el cochinillo. Frotar con ajo y sal.",
+      "2. Untar con manteca de cerdo por dentro y fuera.",
+      "3. Colocar en bandeja con agua, ajo, laurel y tomillo.",
+      "4. Hornear a 160°C durante 2-2.5 horas, regando cada 30 minutos.",
+      "5. Subir a 220°C los últimos 20-30 minutos para que la piel quede dorada y crujiente.",
+      "6. Reposar 10 minutos antes de servir. Trinchar con plato en lugar de cuchillo."
+    ]
+  },
+  {
+    "receta_id": 294,
+    "nombre": "cordero al chilindrón",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "cordero",
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "item": "pimiento rojo",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "ajo",
+      "jamon serrano",
+      "vino blanco",
+      "sal",
+      "aceite",
+      "laurel"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 90,
+    "calorias_aprox": 500,
+    "tags": [
+      "aragon",
+      "navarra",
+      "tradicional",
+      "carne"
+    ],
+    "proceso_corto": "Dorar el cordero, sofreír pimientos y tomates, guisar todo junto hasta que la carne esté tierna.",
+    "proceso_detallado": [
+      "1. Trocear el cordero y dorar en aceite por todos lados.",
+      "2. En el mismo aceite, sofreír cebolla, ajo y jamón.",
+      "3. Añadir los pimientos rojos en tiras y el tomate pelado y troceado.",
+      "4. Incorporar el cordero, vino blanco y laurel.",
+      "5. Cocinar tapado a fuego lento 60-70 minutos.",
+      "6. Rectificar sal y servir."
+    ]
+  },
+  {
+    "receta_id": 295,
+    "nombre": "perdiz con col",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "perdiz",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "col",
+        "qty": 0.5,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "zanahoria",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "vino blanco",
+      "caldo",
+      "ajo",
+      "laurel",
+      "tomillo",
+      "sal",
+      "aceite",
+      "vinagre"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 120,
+    "calorias_aprox": 420,
+    "tags": [
+      "castilla la mancha",
+      "caza",
+      "invierno",
+      "tradicional"
+    ],
+    "proceso_corto": "Dorar las perdices, guisar con verduras y vino hasta tiernas. Acompañar con col estofada.",
+    "proceso_detallado": [
+      "1. Limpiar y salpimentar las perdices. Dorar en aceite caliente.",
+      "2. Añadir cebolla, zanahoria y ajo. Rehogar.",
+      "3. Incorporar vino, vinagre, caldo, laurel y tomillo.",
+      "4. Guisar tapado a fuego lento 1 hora.",
+      "5. Aparte, cocer la col con un chorizo y caldo.",
+      "6. Servir las perdices con su salsa y la col estofada."
+    ]
+  },
+  {
+    "receta_id": 296,
+    "nombre": "marmitako de bonito",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "bonito",
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "item": "patata",
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "cebolla",
+      "ajo",
+      "pimentón",
+      "guindilla",
+      "aceite",
+      "sal",
+      "vino blanco"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 50,
+    "calorias_aprox": 380,
+    "tags": [
+      "pais vasco",
+      "cantabria",
+      "pescado",
+      "cuchara",
+      "verano"
+    ],
+    "proceso_corto": "Sofreír verduras, añadir patatas chasquilladas, caldo y al final el bonito.",
+    "proceso_detallado": [
+      "1. Sofreír cebolla, pimiento y ajo en aceite.",
+      "2. Añadir tomate rallado y pimentón. Cocinar 5 minutos.",
+      "3. Incorporar las patatas chasquilladas (romper con cuchara para ligar el caldo).",
+      "4. Cubrir con caldo o agua, salar y cocinar hasta que las patatas estén tiernas.",
+      "5. Añadir el bonito troceado y cocinar 5 minutos más.",
+      "6. Reposar tapado 5 minutos antes de servir."
+    ]
+  },
+  {
+    "receta_id": 297,
+    "nombre": "suquet de pescado",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "rape",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "patata",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "tomate",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "almendra",
+        "qty": 50,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "cebolla",
+      "ajo",
+      "azafrán",
+      "aceite",
+      "caldo de pescado",
+      "sal",
+      "perejil"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 50,
+    "calorias_aprox": 350,
+    "tags": [
+      "cataluña",
+      "pescado",
+      "cuchara",
+      "marinero"
+    ],
+    "proceso_corto": "Preparar sofrito, cocer patatas en caldo con azafrán, añadir el pescado y terminar con picada.",
+    "proceso_detallado": [
+      "1. Preparar un sofrito con cebolla, ajo y tomate.",
+      "2. Añadir las patatas troceadas y rehogar brevemente.",
+      "3. Cubrir con caldo de pescado con azafrán y cocinar hasta que las patatas estén tiernas.",
+      "4. Añadir el rape troceado y cocinar 8-10 minutos.",
+      "5. Preparar una picada con almendras, ajo y perejil y añadir al guiso.",
+      "6. Mover la cazuela para ligar y servir."
+    ]
+  },
+  {
+    "receta_id": 298,
+    "nombre": "fritura andaluza de pescado",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pescadilla",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "boquerones",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "calamar",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "gambas",
+        "qty": 200,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "harina",
+      "sal",
+      "aceite de oliva",
+      "limón"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 30,
+    "calorias_aprox": 450,
+    "tags": [
+      "andalucia",
+      "pescado",
+      "frito",
+      "tapa",
+      "playa"
+    ],
+    "proceso_corto": "Limpiar, secar, enharinar y freír cada tipo de pescado en aceite bien caliente.",
+    "proceso_detallado": [
+      "1. Limpiar y secar bien todos los pescados y mariscos.",
+      "2. Salar ligeramente.",
+      "3. Rebozar abundantemente en harina, sacudir el exceso.",
+      "4. Freír por partes en aceite muy caliente (180°C) hasta que estén dorados.",
+      "5. Escurrir sobre papel absorbente.",
+      "6. Servir inmediatamente con limón."
+    ]
+  },
+  {
+    "receta_id": 299,
+    "nombre": "sardinas a la plancha",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "sardinas",
+        "qty": 8,
+        "unit": "ud"
+      },
+      {
+        "item": "ajo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "sal gruesa",
+      "aceite de oliva",
+      "limón",
+      "perejil"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 15,
+    "calorias_aprox": 220,
+    "tags": [
+      "pescado",
+      "verano",
+      "rapido",
+      "plancha"
+    ],
+    "proceso_corto": "Limpiar sardinas, salar y cocinar a la plancha bien caliente con ajo y aceite.",
+    "proceso_detallado": [
+      "1. Limpiar las sardinas, quitar escamas y tripas. Secar bien.",
+      "2. Untar ligeramente con aceite y sal gruesa.",
+      "3. Calentar la plancha o parrilla al máximo.",
+      "4. Cocinar 3-4 minutos por cada lado.",
+      "5. Aliñar con aceite, ajo laminado y perejil.",
+      "6. Servir con limón y pan."
+    ]
+  },
+  {
+    "receta_id": 300,
+    "nombre": "ensalada madrileña de verano",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "tomate",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "pepino",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 0.5,
+        "unit": "ud"
+      },
+      {
+        "item": "atún en lata",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vinagre",
+      "sal",
+      "aceitunas"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 10,
+    "calorias_aprox": 200,
+    "tags": [
+      "ensalada",
+      "verano",
+      "rapido",
+      "tradicional"
+    ],
+    "proceso_corto": "Cortar todas las verduras, mezclar con atún y aliñar con aceite, vinagre y sal.",
+    "proceso_detallado": [
+      "1. Lavar y cortar todos los vegetales en trozos del mismo tamaño.",
+      "2. Disponer en ensaladera.",
+      "3. Añadir el atún escurrido y las aceitunas.",
+      "4. Aliñar con aceite de oliva, vinagre y sal al gusto.",
+      "5. Mezclar suavemente y servir."
+    ]
+  },
+  {
+    "receta_id": 301,
+    "nombre": "tostada con aceite y ajo",
+    "categoria": "desayuno",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pan",
+        "qty": 2,
+        "unit": "rebanada"
+      },
+      {
+        "item": "ajo",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "aceite de oliva",
+        "qty": 30,
+        "unit": "ml"
+      }
+    ],
+    "ingredientes_base": [
+      "sal"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 5,
+    "calorias_aprox": 200,
+    "tags": [
+      "desayuno",
+      "rapido",
+      "vegetariano",
+      "vegan",
+      "tradicional"
+    ],
+    "proceso_corto": "Tostar pan, frotar con ajo crudo y aliñar con aceite y sal.",
+    "proceso_detallado": [
+      "1. Tostar las rebanadas de pan.",
+      "2. Frotar con ajo crudo partido por la mitad mientras el pan está caliente.",
+      "3. Añadir un buen chorro de aceite de oliva virgen extra.",
+      "4. Salar al gusto y consumir inmediatamente."
+    ]
+  },
+  {
+    "receta_id": 302,
+    "nombre": "piriñaca gaditana",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "tomate",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "pepino",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vinagre",
+      "sal",
+      "atún"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 15,
+    "calorias_aprox": 160,
+    "tags": [
+      "cadiz",
+      "andalucia",
+      "verano",
+      "ensalada",
+      "frio"
+    ],
+    "proceso_corto": "Picar finamente todas las verduras y aliñar con aceite y vinagre. Servir con atún.",
+    "proceso_detallado": [
+      "1. Picar muy finamente el tomate, pimiento, cebolla y pepino.",
+      "2. Mezclar en un bol.",
+      "3. Aliñar con aceite de oliva, vinagre y sal.",
+      "4. Añadir el atún si se desea.",
+      "5. Refrigerar 30 minutos antes de servir."
+    ]
+  },
+  {
+    "receta_id": 303,
+    "nombre": "pringá andaluza",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "carne de cocido",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "morcilla",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "pan",
+      "sal"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 20,
+    "calorias_aprox": 480,
+    "tags": [
+      "andalucia",
+      "sevilla",
+      "bocadillo",
+      "tradicional",
+      "economico"
+    ],
+    "proceso_corto": "Mezclar y aplastar las carnes del cocido hasta obtener pasta. Untar sobre pan o servir como tapa.",
+    "proceso_detallado": [
+      "1. Coger las carnes sobrantes del cocido: pollo, morcillo, chorizo, morcilla.",
+      "2. Calentar en sartén a fuego medio.",
+      "3. Aplastar y mezclar con tenedor o cuchara hasta obtener pasta rústica.",
+      "4. Dejar que se dore ligeramente en la sartén.",
+      "5. Servir caliente sobre pan tostado o como montadito.",
+      "6. Salar al gusto si es necesario."
+    ]
+  },
+  {
+    "receta_id": 304,
+    "nombre": "huevos a la flamenca",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "huevo",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate triturado",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "jamon serrano",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "pimiento rojo",
+      "cebolla",
+      "ajo",
+      "aceite",
+      "sal",
+      "pimentón"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 30,
+    "calorias_aprox": 380,
+    "tags": [
+      "andalucia",
+      "horno",
+      "huevos",
+      "tradicional"
+    ],
+    "proceso_corto": "Preparar sofrito de tomate con chorizo y jamón, añadir los huevos y hornear.",
+    "proceso_detallado": [
+      "1. Sofreír cebolla, ajo y pimiento en aceite.",
+      "2. Añadir el chorizo en rodajas y el jamón en trocitos.",
+      "3. Incorporar el tomate triturado y pimentón. Cocinar 15 minutos.",
+      "4. Distribuir el sofrito en cazuelitas individuales.",
+      "5. Cascar un huevo en cada cazuelita.",
+      "6. Hornear a 180°C hasta que la clara esté cuajada y la yema cremosa."
+    ]
+  },
+  {
+    "receta_id": 305,
+    "nombre": "menudo gitano",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "callos de cerdo",
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "item": "garbanzos",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "morcilla",
+        "qty": 1,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "cebolla",
+      "ajo",
+      "tomate",
+      "pimentón",
+      "comino",
+      "laurel",
+      "sal",
+      "aceite"
+    ],
+    "dificultad": "alta",
+    "tiempo_min": 240,
+    "calorias_aprox": 550,
+    "tags": [
+      "andalucia",
+      "sevilla",
+      "tradicional",
+      "contundente"
+    ],
+    "proceso_corto": "Cocer los callos, añadir garbanzos y embutidos con sofrito especiado hasta que todo esté tierno.",
+    "proceso_detallado": [
+      "1. Limpiar muy bien los callos. Blanquear en agua hirviendo y escurrir.",
+      "2. Cocer los callos con cebolla, ajo y laurel 2 horas.",
+      "3. Remojar los garbanzos la noche anterior y cocer aparte.",
+      "4. Sofreír cebolla, ajo, tomate con pimentón y comino.",
+      "5. Juntar callos, garbanzos, sofrito y embutidos.",
+      "6. Cocinar todo junto 30-40 minutos hasta que la salsa espese."
+    ]
+  },
+  {
+    "receta_id": 306,
+    "nombre": "lacón con grelos",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "lacón",
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "item": "grelos",
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "item": "patata",
+        "qty": 4,
+        "unit": "ud"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "aceite de oliva"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 180,
+    "calorias_aprox": 480,
+    "tags": [
+      "galicia",
+      "tradicional",
+      "invierno",
+      "carnaval"
+    ],
+    "proceso_corto": "Cocer el lacón en agua, añadir grelos, patatas y chorizo hasta que todo esté tierno.",
+    "proceso_detallado": [
+      "1. Desalar el lacón 24-48 horas si es salado, cambiando el agua.",
+      "2. Cocer el lacón en agua abundante durante 2 horas.",
+      "3. Añadir el chorizo y las patatas peladas y enteras.",
+      "4. Incorporar los grelos limpios y cocinar 30 minutos más.",
+      "5. Rectificar sal y servir todo junto con un chorro de aceite de oliva."
+    ]
+  },
+  {
+    "receta_id": 307,
+    "nombre": "pimientos de padron",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pimiento de padron",
+        "qty": 400,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal gruesa"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 10,
+    "calorias_aprox": 120,
+    "tags": [
+      "galicia",
+      "tapa",
+      "rapido",
+      "vegetariano",
+      "vegan"
+    ],
+    "proceso_corto": "Freír los pimientos enteros en aceite muy caliente y espolvorear con sal gruesa.",
+    "proceso_detallado": [
+      "1. Lavar y secar bien los pimientos de padrón.",
+      "2. Calentar abundante aceite de oliva en sartén a fuego muy alto.",
+      "3. Añadir los pimientos y freír moviendo constantemente hasta que estén tostados y la piel arrugada.",
+      "4. Escurrir sobre papel absorbente.",
+      "5. Espolvorear con sal gruesa y servir inmediatamente."
+    ]
+  },
+  {
+    "receta_id": 308,
+    "nombre": "cocido montañés cantabro",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "alubias blancas",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "berza",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "morcilla",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "costilla de cerdo",
+        "qty": 300,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "chorizo",
+      "tocino",
+      "ajo",
+      "pimentón",
+      "sal"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 150,
+    "calorias_aprox": 560,
+    "tags": [
+      "cantabria",
+      "invierno",
+      "cuchara",
+      "contundente"
+    ],
+    "proceso_corto": "Cocer alubias con las carnes. Añadir berza y cocer hasta que todo esté tierno.",
+    "proceso_detallado": [
+      "1. Remojar las alubias la noche anterior.",
+      "2. Cocer la costilla y el tocino en agua con sal.",
+      "3. Añadir las alubias y cocinar a fuego lento 1 hora.",
+      "4. Añadir berza, chorizo, morcilla y pimentón.",
+      "5. Cocinar 45 minutos más hasta que todo esté tierno.",
+      "6. Ajustar sal y servir muy caliente."
+    ]
+  },
+  {
+    "receta_id": 309,
+    "nombre": "pintxos de jamon y queso",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pan baguette",
+        "qty": 1,
+        "unit": "ud"
+      },
+      {
+        "item": "jamon serrano",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "queso manchego",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "mostaza"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 10,
+    "calorias_aprox": 280,
+    "tags": [
+      "pais vasco",
+      "navarra",
+      "aperitivo",
+      "rapido"
+    ],
+    "proceso_corto": "Cortar pan en rebanadas, untar con mostaza y colocar jamón y queso encima.",
+    "proceso_detallado": [
+      "1. Cortar la baguette en rebanadas de 1 cm.",
+      "2. Tostar ligeramente.",
+      "3. Untar con un poco de mostaza o aceite.",
+      "4. Colocar una loncha de jamón serrano.",
+      "5. Añadir una lámina de queso manchego.",
+      "6. Asegurar con palillo y servir."
+    ]
+  },
+  {
+    "receta_id": 310,
+    "nombre": "sopas mallorquinas",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "pan de payés",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "col",
+        "qty": 0.5,
+        "unit": "ud"
+      },
+      {
+        "item": "pimiento verde",
+        "qty": 2,
+        "unit": "ud"
+      },
+      {
+        "item": "tomate",
+        "qty": 3,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "ajo",
+      "cebolla",
+      "aceite de oliva",
+      "pimentón",
+      "sal",
+      "agua"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 45,
+    "calorias_aprox": 280,
+    "tags": [
+      "baleares",
+      "mallorca",
+      "tradicional",
+      "vegetariano"
+    ],
+    "proceso_corto": "Preparar sofrito de verduras, añadir agua y al final el pan desmigado para que se hidrate.",
+    "proceso_detallado": [
+      "1. Sofreír cebolla, ajo, pimiento y tomate en aceite de oliva.",
+      "2. Añadir la col en juliana y cocinar hasta que se ablande.",
+      "3. Cubrir con agua, añadir pimentón y sal. Cocer 20 minutos.",
+      "4. Colocar el pan en rebanadas finas en el fondo de una cazuela de barro.",
+      "5. Verter el caldo con las verduras sobre el pan.",
+      "6. Dejar reposar 5 minutos para que el pan se empape y servir."
+    ]
+  },
+  {
+    "receta_id": 311,
+    "nombre": "conejo al romero",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "conejo",
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 6,
+        "unit": "ud"
+      },
+      {
+        "item": "romero",
+        "qty": 3,
+        "unit": "rama"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "vino blanco",
+      "sal",
+      "pimienta",
+      "limón"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 60,
+    "calorias_aprox": 350,
+    "tags": [
+      "carne",
+      "horno",
+      "aromas",
+      "tradicional"
+    ],
+    "proceso_corto": "Marinar el conejo con romero y ajo, hornear o guisar hasta que esté dorado y tierno.",
+    "proceso_detallado": [
+      "1. Trocear el conejo y salpimentar.",
+      "2. Marinar con ajo, romero, aceite y vino 1 hora.",
+      "3. Dorar el conejo en sartén o al horno a 200°C.",
+      "4. Añadir la marinada y hornear 40 minutos más.",
+      "5. Regar ocasionalmente con el jugo.",
+      "6. Servir con los ajos y el romero."
+    ]
+  },
+  {
+    "receta_id": 312,
+    "nombre": "tarta de queso al horno",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "queso crema",
+        "qty": 400,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "azucar",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "nata",
+        "qty": 200,
+        "unit": "ml"
+      }
+    ],
+    "ingredientes_base": [
+      "harina",
+      "vainilla"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 60,
+    "calorias_aprox": 380,
+    "tags": [
+      "postre",
+      "tarta",
+      "pais vasco",
+      "san sebastian"
+    ],
+    "proceso_corto": "Batir queso con huevos, azúcar y nata, hornear hasta dorar por fuera y cremosa por dentro.",
+    "proceso_detallado": [
+      "1. Batir el queso crema con el azúcar hasta que sea homogéneo.",
+      "2. Añadir los huevos uno a uno sin dejar de batir.",
+      "3. Incorporar la nata y una cucharada de harina.",
+      "4. Forrar molde con papel de horno y verter la mezcla.",
+      "5. Hornear a 200°C unos 35-40 minutos hasta que la superficie esté dorada.",
+      "6. El centro debe quedar tembloroso. Enfriar y refrigerar."
+    ]
+  },
+  {
+    "receta_id": 313,
+    "nombre": "filloas gallegas",
+    "categoria": "postre",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "harina",
+        "qty": 250,
+        "unit": "g"
+      },
+      {
+        "item": "huevo",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "leche",
+        "qty": 500,
+        "unit": "ml"
+      }
+    ],
+    "ingredientes_base": [
+      "sal",
+      "mantequilla",
+      "miel",
+      "azúcar"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 30,
+    "calorias_aprox": 230,
+    "tags": [
+      "galicia",
+      "postre",
+      "carnaval",
+      "tradicional"
+    ],
+    "proceso_corto": "Preparar masa fina de filloa, cocinar en sartén antiadherente y servir con miel.",
+    "proceso_detallado": [
+      "1. Batir los huevos con la harina y sal.",
+      "2. Añadir la leche poco a poco hasta obtener masa líquida sin grumos.",
+      "3. Dejar reposar la masa 30 minutos.",
+      "4. Untar ligeramente una sartén con mantequilla y calentar.",
+      "5. Verter un poco de masa y extender finamente rotando la sartén.",
+      "6. Cocer 1-2 min por lado. Servir con miel o azúcar."
+    ]
+  },
+  {
+    "receta_id": 314,
+    "nombre": "gachas manchegas",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "harina de almortas",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "ajo",
+        "qty": 6,
+        "unit": "ud"
+      },
+      {
+        "item": "chorizo",
+        "qty": 2,
+        "unit": "ud"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "pimentón",
+      "sal",
+      "agua",
+      "panceta"
+    ],
+    "dificultad": "media",
+    "tiempo_min": 30,
+    "calorias_aprox": 480,
+    "tags": [
+      "castilla la mancha",
+      "tradicional",
+      "invierno",
+      "contundente"
+    ],
+    "proceso_corto": "Freír ajos y carnes, añadir harina con agua y cocer removiendo constantemente hasta espesar.",
+    "proceso_detallado": [
+      "1. Freír los ajos enteros en aceite abundante. Reservar.",
+      "2. Freír el chorizo y la panceta en el mismo aceite.",
+      "3. Añadir pimentón sin que se queme.",
+      "4. Disolver la harina en agua fría y añadir al aceite.",
+      "5. Remover constantemente a fuego medio hasta que espese.",
+      "6. Servir con los ajos y las carnes por encima."
+    ]
+  },
+  {
+    "receta_id": 315,
+    "nombre": "ensalada de naranja y bacalao",
+    "categoria": "comida",
+    "tipo": "completa",
+    "ingredientes_clave": [
+      {
+        "item": "bacalao",
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "item": "naranja",
+        "qty": 3,
+        "unit": "ud"
+      },
+      {
+        "item": "cebolla",
+        "qty": 0.5,
+        "unit": "ud"
+      },
+      {
+        "item": "aceitunas negras",
+        "qty": 100,
+        "unit": "g"
+      }
+    ],
+    "ingredientes_base": [
+      "aceite de oliva",
+      "sal",
+      "pimienta"
+    ],
+    "dificultad": "baja",
+    "tiempo_min": 20,
+    "calorias_aprox": 220,
+    "tags": [
+      "ensalada",
+      "bacalao",
+      "naranja",
+      "invierno",
+      "andalucia"
+    ],
+    "proceso_corto": "Desalar y desmigar el bacalao. Pelar naranjas a lo vivo. Mezclar con cebolla y aceitunas.",
+    "proceso_detallado": [
+      "1. Desalar el bacalao 24 horas. Desmigar eliminando espinas.",
+      "2. Pelar las naranjas a lo vivo cortando en rodajas.",
+      "3. Cortar la cebolla en juliana fina y remojar en agua 10 minutos.",
+      "4. Disponer las naranjas, el bacalao, la cebolla y aceitunas en fuente.",
+      "5. Aliñar con aceite de oliva, sal y pimienta.",
+      "6. Dejar reposar 15 minutos antes de servir."
+    ]
   }
 ]
