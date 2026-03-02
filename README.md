@@ -44,25 +44,25 @@ python app_gradiov4.py
 
 ```
 The-Fridge-Survival-Guide/
-├── app_gradiov4.py          → Entry point unificado
-├── config.py                → Configuración centralizada (colores, rutas, modos)
-├── models.py                → Modelos Pydantic para validación de datos
+├── app_gradiov4.py          → Application entry point 
+├── config.py                → Centralized configuration (colors, routes, modes)
+├── models.py                → Pydantic data validation models
 ├── requirements.txt
 │
 ├── core/
-│   ├── vision.py            → Detección de ingredientes con Gemini Vision
-│   └── recommender.py       → Motor de recomendación TF-IDF + sustituciones
+│   ├── vision.py            → Gemini Vision ingredient detection module
+│   └── recommender.py       → TF-IDF recommendation engine
 │
 ├── components/
-│   ├── ui_renderer.py       → Renderizado HTML/CSS (tema Nevera de Noche)
-│   ├── detector.py          → Wrapper de visión con manejo de errores
-│   └── analytics.py         → Dashboard de sesión y persistencia
+│   ├── ui_renderer.py       → HTML/CSS rendered (night fridge theme)
+│   ├── detector.py          → Detection wrapper with error handling
+│   └── analytics.py         → User analytics dashboard
 │
-├── releases/                → Historial de versiones anteriores
+├── releases/                → Previous app versions log
 │   ├── app_gradiov2.py
 │   └── app_gradiov3.py
 │
-└── data/                    → Local only, no incluido en el repo
+└── data/                    → Local only (not included in the repository)
     └── recetas_backend_proceso_ultra.json
 ```
 
