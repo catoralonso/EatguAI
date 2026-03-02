@@ -188,9 +188,46 @@ class UIRenderer:
     @classmethod
     def render_ingredients_grid(cls, ingredients: List[Any]) -> str:
         """Grid visual de ingredientes detectados."""
+        if not ingredients:
+            return ""
+    
+        cards = []
         for i, ing in enumerate(sorted(ingredients, key=lambda x: x.confidence, reverse=True)):
-            emoji = ing.emoji
-            cat_color = "#4a6fa5" 
+            cards.append(f"""
+            <div class="glass-panel" style="padding:16px; text-align:center; position:relative;">
+                <div style="
+                    position:absolute; top:0; left:0; right:0; height:3px;
+                    background:#4a6fa5; opacity:0.8;
+                    box-shadow:0 0 8px #4a6fa5;
+                "></div>
+                <div style="font-size:2.2em; margin-bottom:8px;">
+                    {ing.emoji}
+                </div>
+                <div style="font-family:var(--font-body); font-size:0.9em;
+                            color:var(--text-primary); margin-bottom:4px;">
+                    {ing.name.title()}
+                </div>
+                <div style="font-family:var(--font-data); font-size:0.75em;
+                            color:var(--text-secondary);">
+                    {ing.confidence:.0%}
+                </div>
+            </div>
+            """)
+    
+        return f"""
+        <div style="margin:24px 0;">
+            <div class="text-label" style="margin-bottom:12px;">
+                Ingredientes Detectados ({len(ingredients)})
+            </div>
+            <div style="
+                display:grid;
+                grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
+                gap:12px;
+            " class="fade-in">
+                {''.join(cards)}
+            </div>
+        </div>
+        """ 
     
     @classmethod
     def render_empty_state(cls, message: str = "Los resultados aparecerán aquí", 
@@ -461,7 +498,7 @@ class UIRenderer:
         return f"""
         <div class="fade-in">
             <div class="text-label" style="margin-bottom:16px;">
-                🍽️ {len(recommendations)} recetas encontradas
+                 {len(recommendations)} recetas encontradas
             </div>
             {cards}
         </div>

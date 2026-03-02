@@ -116,9 +116,6 @@ def clean_ingredients(
 
             name_norm = _normalize(name)
 
-            if name_norm in DISCARD or name.lower() in DISCARD:
-                continue
-
             if name_norm in seen:
                 continue
 
@@ -129,7 +126,7 @@ def clean_ingredients(
                 raw_detection=str(item),
                 emoji=item.get("emoji", "🥘"),
             ))
-            logger.debug(f"  ✓ {name} ({conf:.0%}) [{_infer_category(name)}]")
+            logger.debug(f"  ✓ {name} ({conf:.0%})")
 
         except Exception as e:
             logger.warning(f"Error procesando item {item}: {e}")

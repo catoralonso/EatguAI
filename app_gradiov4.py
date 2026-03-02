@@ -251,9 +251,34 @@ def mostrar_analytics():
 # =============================================================================
 # CSS
 # =============================================================================
-
 CSS_CUSTOM = f"""
-{renderer.get_base_styles()}
+body,
+.gradio-container,
+.gradio-container-6-8-0,
+.main,
+#root {{
+    background: {COLORS.BG_PRIMARY} !important;
+    background-color: {COLORS.BG_PRIMARY} !important;
+}}
+
+* {{
+    --bg-primary: {COLORS.BG_PRIMARY};
+    --bg-secondary: {COLORS.BG_SECONDARY};
+    --ice-blue: {COLORS.ICE_BLUE};
+    --purple-nebula: {COLORS.PURPLE_NEBULA};
+    --success: {COLORS.SUCCESS};
+    --warning: {COLORS.WARNING};
+    --error: {COLORS.ERROR};
+    --text-primary: {COLORS.TEXT_PRIMARY};
+    --text-secondary: {COLORS.TEXT_SECONDARY};
+    --text-muted: {COLORS.TEXT_MUTED};
+    --border-subtle: {COLORS.BORDER_SUBTLE};
+    --border-glow: {COLORS.BORDER_GLOW};
+    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'Syne', sans-serif;
+    --font-data: 'JetBrains Mono', monospace;
+    --font-accent: 'Space Grotesk', sans-serif;
+}}
 
 /* ─────────────────────────────────────────────────────────────────────────── */
 /* CONTENEDOR PRINCIPAL */
@@ -725,6 +750,47 @@ button.secondary.svelte-xzq5jh:hover {{
     min-height: unset !important;
 }}
 
+.tab-container.svelte-11gaq1 {{
+    background: rgba(255,255,255,0.03) !important;
+    border-radius: 16px !important;
+    padding: 6px !important;
+    border: 1px solid rgba(125, 211, 252, 0.15) !important;
+}}
+
+button.svelte-11gaq1 {{
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0.75em !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: rgba(125, 211, 252, 0.6) !important;
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    border: none !important;
+    background: transparent !important;
+}}
+
+button.svelte-11gaq1:hover {{
+    color: rgba(125, 211, 252, 0.85) !important;
+    background: rgba(125, 211, 252, 0.05) !important;
+}}
+
+button.svelte-11gaq1.selected {{
+    color: {COLORS.ICE_BLUE} !important;
+    background: rgba(125, 211, 252, 0.12) !important;
+    box-shadow: 0 0 20px rgba(125, 211, 252, 0.15) !important;
+    font-weight: 600 !important;
+}}
+
+/* Text labels en HTML inyectado */
+.text-label {{
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0.75em !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: {COLORS.ICE_BLUE} !important;
+    opacity: 0.9 !important;
+}}
 """
 
 # =============================================================================
