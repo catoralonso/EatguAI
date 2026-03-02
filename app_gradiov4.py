@@ -373,20 +373,19 @@ fieldset[style*="border-style: solid"] {{
 /* TABS                                                                        */
 /* ═══════════════════════════════════════════════════════════════════════════ */
 
-.tab-container.svelte-11gaq1 {{
+/* Contenedor principal de tabs */
+.tabs {{
     background: rgba(255,255,255,0.03) !important;
     border-radius: 16px !important;
     padding: 6px !important;
     border: 1px solid rgba(125, 211, 252, 0.15) !important;
+    margin-bottom: 20px !important;
+    display: flex !important;
+    gap: 4px !important;
 }}
 
-.tab-container.svelte-11gaq1::after,
-.tab-wrapper.svelte-11gaq1 {{
-    border-bottom: none !important;
-    display: none !important;
-}}
-
-button.svelte-11gaq1 {{
+/* Botón individual de tab */
+.tab-nav button {{
     font-family: 'Space Grotesk', sans-serif !important;
     font-size: 0.75em !important;
     font-weight: 500 !important;
@@ -398,18 +397,24 @@ button.svelte-11gaq1 {{
     border: none !important;
     background: transparent !important;
     transition: all 0.3s ease !important;
+    cursor: pointer !important;
 }}
 
-button.svelte-11gaq1:hover {{
+.tab-nav button:hover {{
     color: rgba(125, 211, 252, 0.85) !important;
     background: rgba(125, 211, 252, 0.05) !important;
 }}
 
-button.svelte-11gaq1.selected {{
-    color: {COLORS.ICE_BLUE} !important;
+.tab-nav button.selected {{
+    color: #7dd3fc !important;
     background: rgba(125, 211, 252, 0.12) !important;
     box-shadow: 0 0 20px rgba(125, 211, 252, 0.15) !important;
     font-weight: 600 !important;
+}}
+
+/* Quitar línea inferior de tabs */
+.tab-nav {{
+    border-bottom: none !important;
 }}
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
