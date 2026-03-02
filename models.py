@@ -26,19 +26,11 @@ class DetectedIngredient(BaseModel):
     name: str = Field(..., min_length=1)
     confidence: float = Field(..., ge=0.0, le=1.0)
     raw_detection: Optional[str] = None
-    category: Optional[str] = None
+    emoji: str = "🥘"
     
     @validator('name')
     def normalize(cls, v):
         return v.lower().strip()
-    
-    @property
-    def emoji(self) -> str:
-        if self.confidence >= 0.85:
-            return "🟢"
-        elif self.confidence >= 0.65:
-            return "🟡"
-        return "🔴"
     
     @property
     def color(self) -> str:
