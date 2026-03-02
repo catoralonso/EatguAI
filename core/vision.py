@@ -120,11 +120,13 @@ def clean_ingredients(
                 continue
 
             seen.add(name_norm)
+            emoji_raw = item.get("emoji", "")
+            emoji = emoji_raw if emoji_raw and emoji_raw.strip() else "🥘"
             cleaned.append(DetectedIngredient(
-                name=name,
+                name=name,    
                 confidence=conf,
                 raw_detection=str(item),
-                emoji=item.get("emoji", "🥘"),
+                emoji=emoji,
             ))
             logger.debug(f"  ✓ {name} ({conf:.0%})")
 
