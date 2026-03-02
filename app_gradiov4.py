@@ -255,9 +255,16 @@ def mostrar_analytics():
 # CSS
 # =============================================================================
 CSS_CUSTOM = f"""
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* BASE — Fondo oscuro global y variables CSS                                 */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
 body,
 .gradio-container,
 .gradio-container-6-8-0,
+.svelte-99kmwu,
+.gradio-container.svelte-99kmwu,
 .main,
 #root {{
     background: {COLORS.BG_PRIMARY} !important;
@@ -283,33 +290,103 @@ body,
     --font-accent: 'Space Grotesk', sans-serif;
 }}
 
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* CONTENEDOR PRINCIPAL */
-/* ─────────────────────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* CONTENEDOR PRINCIPAL                                                        */
+/* ═══════════════════════════════════════════════════════════════════════════ */
 
 .gradio-container-6-8-0 {{
     border: 1px solid rgba(125, 211, 252, 0.2) !important;
     border-radius: 20px !important;
-    box-shadow: 
+    box-shadow:
         0 0 40px rgba(125, 211, 252, 0.1),
         0 0 80px rgba(125, 211, 252, 0.05),
         inset 0 0 40px rgba(125, 211, 252, 0.02) !important;
     overflow: hidden !important;
 }}
 
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* TABS - Mismo estilo que "cocina con lo que tienes ahora" */
-/* ─────────────────────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* BLOCKS — Contenedores con brillo                                            */
+/* ═══════════════════════════════════════════════════════════════════════════ */
 
-.tab-nav {{
+.block,
+.block.svelte-1plpy97 {{
+    background: {COLORS.BG_SECONDARY} !important;
+    border: 1px solid rgba(125, 211, 252, 0.25) !important;
+    border-radius: 16px !important;
+    border-style: none !important;
+    padding: 16px !important;
+    margin: 0 !important;
+    box-shadow:
+        0 0 18px rgba(125, 211, 252, 0.15),
+        0 0 40px rgba(125, 211, 252, 0.06),
+        inset 0 0 20px rgba(125, 211, 252, 0.03) !important;
+    transition: all 0.3s ease !important;
+}}
+
+.block:hover {{
+    border-color: rgba(125, 211, 252, 0.45) !important;
+    box-shadow:
+        0 0 28px rgba(125, 211, 252, 0.25),
+        0 0 60px rgba(125, 211, 252, 0.1),
+        inset 0 0 20px rgba(125, 211, 252, 0.05) !important;
+}}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* LAYOUT — Rows, columns, forms, grupos                                       */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+.gradio-row {{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}}
+
+.gradio-row > .column,
+.gradio-group,
+fieldset,
+.group,
+.form,
+.form.svelte-d5xbca {{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}}
+
+.form {{ gap: 8px !important; }}
+.wrap {{ padding: 16px !important; }}
+
+/* Fieldset radio — flex para centrar */
+fieldset.block.svelte-1plpy97,
+fieldset[style*="border-style: solid"] {{
+    border-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* TABS                                                                        */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+.tab-container.svelte-11gaq1 {{
     background: rgba(255,255,255,0.03) !important;
     border-radius: 16px !important;
     padding: 6px !important;
-    margin-bottom: 24px !important;
     border: 1px solid rgba(125, 211, 252, 0.15) !important;
 }}
 
-.tab-nav button {{
+.tab-container.svelte-11gaq1::after,
+.tab-wrapper.svelte-11gaq1 {{
+    border-bottom: none !important;
+    display: none !important;
+}}
+
+button.svelte-11gaq1 {{
     font-family: 'Space Grotesk', sans-serif !important;
     font-size: 0.75em !important;
     font-weight: 500 !important;
@@ -323,34 +400,30 @@ body,
     transition: all 0.3s ease !important;
 }}
 
-.tab-nav button:hover {{
+button.svelte-11gaq1:hover {{
     color: rgba(125, 211, 252, 0.85) !important;
     background: rgba(125, 211, 252, 0.05) !important;
 }}
 
-.tab-nav button.selected {{
+button.svelte-11gaq1.selected {{
     color: {COLORS.ICE_BLUE} !important;
     background: rgba(125, 211, 252, 0.12) !important;
     box-shadow: 0 0 20px rgba(125, 211, 252, 0.15) !important;
     font-weight: 600 !important;
 }}
 
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* LABELS DE FILTROS - Mismo estilo que subtítulo del header */
-/* ─────────────────────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* LABELS Y TEXTOS                                                             */
+/* ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Todos los labels de Gradio */
+[data-testid="block-info"],
 label .label-text,
 label span,
 .form .label span,
 .gradio-dropdown label,
 .gradio-slider label,
 .gradio-radio label,
-.gradio-checkbox label,
-.gradio-textbox label,
-.gradio-number label,
 .gradio-image label,
-input[type="number"] + label,
 .wrap .label span {{
     color: {COLORS.ICE_BLUE} !important;
     font-family: 'Space Grotesk', sans-serif !important;
@@ -360,99 +433,29 @@ input[type="number"] + label,
     letter-spacing: 2px !important;
     opacity: 0.9 !important;
     margin-bottom: 8px !important;
-    display: block !important;
 }}
 
-/* Labels específicos de dropdown y radio */
-.gradio-dropdown .label span,
-.gradio-radio .label span,
-.gradio-slider .label span {{
-    color: {COLORS.ICE_BLUE} !important;
+.text-label {{
     font-family: 'Space Grotesk', sans-serif !important;
     font-size: 0.75em !important;
     text-transform: uppercase !important;
     letter-spacing: 2px !important;
+    color: {COLORS.ICE_BLUE} !important;
+    opacity: 0.9 !important;
 }}
 
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* CONTENEDORES (BLOCKS) - Sin espacios entre ellos, solo bordes brillantes */
-/* ─────────────────────────────────────────────────────────────────────────── */
-
-/* Cada componente individual envuelto en .block */
-.block {{
+/* Label flotante imagen */
+label.svelte-19djge9 {{
+    color: {COLORS.ICE_BLUE} !important;
     background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid rgba(125, 211, 252, 0.25) !important;
-    border-radius: 16px !important;
-    box-shadow: 
-        0 0 18px rgba(125, 211, 252, 0.15),
-        0 0 40px rgba(125, 211, 252, 0.06),
-        inset 0 0 20px rgba(125, 211, 252, 0.03) !important;
-    margin: 0 !important;  /* Sin margen entre contenedores */
-    transition: all 0.3s ease !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0.75em !important;
 }}
 
-.block:hover {{
-    border-color: rgba(125, 211, 252, 0.45) !important;
-    box-shadow: 
-        0 0 28px rgba(125, 211, 252, 0.25),
-        0 0 60px rgba(125, 211, 252, 0.1),
-        inset 0 0 20px rgba(125, 211, 252, 0.05) !important;
-}}
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* RADIO BUTTONS                                                               */
+/* ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Quitar padding interno excesivo de los wrap */
-.wrap {{
-    padding: 16px !important;
-}}
-
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* ROWS - Sin fondo, sin bordes, solo gap controlado */
-/* ─────────────────────────────────────────────────────────────────────────── */
-
-.gradio-row {{
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    gap: 12px !important;  /* Separación entre columnas, no espacio vacío */
-    margin: 0 !important;
-    padding: 0 !important;
-}}
-
-/* Las columnas dentro del row */
-.gradio-row > .column {{
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}}
-
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* GRUPOS Y FIELDSETS - Sin fondo gris */
-/* ─────────────────────────────────────────────────────────────────────────── */
-
-.gradio-group,
-fieldset,
-.group {{
-    border: none !important;
-    background: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-}}
-
-/* Quitar fondo del form contenedor */
-.form {{
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    gap: 8px !important;
-}}
-
-/* ─────────────────────────────────────────────────────────────────────────── */
-/* COMPONENTES INTERNOS - Sin bordes propios, heredan del .block */
-/* ─────────────────────────────────────────────────────────────────────────── */
-
-/* Radio buttons */
 .gradio-radio .wrap,
 .gradio-radio .container {{
     background: transparent !important;
@@ -460,28 +463,50 @@ fieldset,
     padding: 8px 0 !important;
 }}
 
-/* Radio items individuales */
-.radio-item {{
-    background: rgba(255,255,255,0.03) !important;
-    border: 1px solid rgba(125, 211, 252, 0.15) !important;
-    border-radius: 8px !important;
-    margin: 4px 0 !important;
+.wrap.svelte-e4x47i {{
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    padding: 8px 4px !important;
+    align-items: center !important;
+}}
+
+input[type="radio"].svelte-19qdtil {{ display: none !important; }}
+
+label.svelte-19qdtil {{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     padding: 8px 12px !important;
-    transition: all 0.2s ease !important;
+    border-radius: 8px !important;
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(125,211,252,0.15) !important;
+    cursor: pointer !important;
+    flex: 1 !important;
+    font-size: 0.85em !important;
+    text-align: center !important;
 }}
 
-.radio-item:hover {{
-    background: rgba(125, 211, 252, 0.08) !important;
-    border-color: rgba(125, 211, 252, 0.3) !important;
-}}
-
-.radio-item.selected {{
-    background: rgba(125, 211, 252, 0.15) !important;
-    border-color: rgba(125, 211, 252, 0.4) !important;
+label.svelte-19qdtil.selected {{
+    background: rgba(125,211,252,0.12) !important;
+    border-color: rgba(125,211,252,0.4) !important;
     color: {COLORS.ICE_BLUE} !important;
 }}
 
-/* Slider */
+label.svelte-19qdtil span.svelte-19qdtil {{
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+}}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* SLIDER                                                                      */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
 .gradio-slider .wrap {{
     background: transparent !important;
     border: none !important;
@@ -495,18 +520,45 @@ input[type="range"] {{
     border-radius: 3px !important;
 }}
 
-/* Dropdown */
-.gradio-dropdown .wrap {{
-    background: {COLORS.BG_PRIMARY} !important;
-    border: 1px solid rgba(125, 211, 252, 0.2) !important;
-    border-radius: 10px !important;
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* DROPDOWN                                                                    */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+.svelte-1xfsv4t.container {{ min-height: unset !important; }}
+
+.wrap.svelte-1xfsv4t {{
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    min-height: unset !important;
 }}
 
-.gradio-dropdown .wrap:hover {{
-    border-color: rgba(125, 211, 252, 0.4) !important;
+.wrap-inner.svelte-1xfsv4t {{
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(125,211,252,0.15) !important;
+    border-radius: 8px !important;
+    padding: 6px 8px !important;
+    transition: all 0.2s ease !important;
 }}
 
-/* Input de texto */
+.wrap-inner.svelte-1xfsv4t:hover {{
+    background: rgba(125,211,252,0.08) !important;
+    border-color: rgba(125,211,252,0.3) !important;
+}}
+
+.wrap-inner.svelte-1xfsv4t input {{
+    background: transparent !important;
+    border: none !important;
+    color: {COLORS.TEXT_PRIMARY} !important;
+    font-family: 'DM Sans', sans-serif !important;
+}}
+
+.dropdown-arrow {{ fill: {COLORS.ICE_BLUE} !important; opacity: 0.6 !important; }}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* INPUTS DE TEXTO                                                             */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
 textarea,
 input[type="text"],
 input[type="number"] {{
@@ -517,23 +569,32 @@ input[type="number"] {{
     font-family: 'DM Sans', sans-serif !important;
 }}
 
-textarea:focus,
-input:focus {{
+textarea:focus, input:focus {{
     border-color: {COLORS.ICE_BLUE} !important;
     box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1) !important;
     outline: none !important;
 }}
 
-/* Imagen */
-.gradio-image .wrap {{
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* IMAGEN                                                                      */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+.image-container.svelte-6uxbr3,
+.upload-container.svelte-6uxbr3 {{
     background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid rgba(125, 211, 252, 0.25) !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
-    box-shadow: 
-        0 0 18px rgba(125, 211, 252, 0.15),
-        inset 0 0 20px rgba(125, 211, 252, 0.03) !important;
 }}
+
+.source-selection.svelte-exvkcd {{ background: {COLORS.BG_SECONDARY} !important; }}
+.icon.svelte-exvkcd {{ color: {COLORS.ICE_BLUE} !important; opacity: 0.6 !important; }}
+.icon-button-wrapper.svelte-1pnho82 {{ background: transparent !important; }}
+.icon-button.svelte-3jwzs9 {{
+    background: {COLORS.BG_SECONDARY} !important;
+    color: {COLORS.ICE_BLUE} !important;
+}}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* BOTONES                                                                     */
+/* ═══════════════════════════════════════════════════════════════════════════ */
 
 button.lg.primary,
 button.svelte-xzq5jh.primary {{
@@ -555,7 +616,7 @@ button.svelte-xzq5jh.primary:hover {{
     filter: brightness(1.1) !important;
 }}
 
-/* Botón secundario */
+/* Botón secundario base */
 button.secondary {{
     background: rgba(125, 211, 252, 0.1) !important;
     border: 1px solid rgba(125, 211, 252, 0.3) !important;
@@ -573,141 +634,13 @@ button.secondary:hover {{
     border-color: rgba(125, 211, 252, 0.5) !important;
 }}
 
-/* HTML inyectado - transparente */
-.gradio-html {{
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}}
-
-/* Animaciones */
-@keyframes float {{
-    0%, 100% {{ transform: translateY(0px); }}
-    50% {{ transform: translateY(-10px); }}
-}}
-@keyframes dotPulse {{
-    0%, 80%, 100% {{ transform: scale(0.6); opacity: 0.4; }}
-    40% {{ transform: scale(1); opacity: 1; box-shadow: 0 0 10px var(--ice-blue); }}
-}}
-
-/* Labels universales */
-[data-testid="block-info"] {{
-    color: {COLORS.ICE_BLUE} !important;
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 0.75em !important;
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    opacity: 0.9 !important;
-    padding-left: 4px !important;
-    margin-bottom: 8px !important;
-}}
-
-/* Form contenedor - transparente */
-.form.svelte-d5xbca {{
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}}
-
-/* Todos los bloques con brillo */
-.block.svelte-1plpy97 {{
-    border-style: none !important;
-    background: {COLORS.BG_SECONDARY} !important;
-    border: 1px solid rgba(125, 211, 252, 0.25) !important;
-    border-radius: 16px !important;
-    padding: 16px !important;
-    box-shadow: 
-        0 0 18px rgba(125, 211, 252, 0.15),
-        0 0 40px rgba(125, 211, 252, 0.06),
-        inset 0 0 20px rgba(125, 211, 252, 0.03) !important;
-}}
-
-/* Fieldset (radio) - mismo estilo + flex para centrar */
-fieldset.block.svelte-1plpy97,
-fieldset[style*="border-style: solid"] {{
-    border-style: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-}}
-
-/* Radio en fila horizontal */
-.wrap.svelte-e4x47i {{
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 8px !important;
-    padding: 8px 4px !important;
-    align-items: center !important;
-}}
-
-/* Radio labels */
-input[type="radio"].svelte-19qdtil {{
-    display: none !important;
-}}
-
-label.svelte-19qdtil {{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 8px 12px !important;
-    border-radius: 8px !important;
-    background: rgba(255,255,255,0.03) !important;
-    border: 1px solid rgba(125,211,252,0.15) !important;
-    cursor: pointer !important;
-    flex: 1 !important;
-    min-width: 0 !important;
-    font-size: 0.85em !important;
-    text-align: center !important;
-}}
-
-label.svelte-19qdtil.selected {{
-    background: rgba(125,211,252,0.12) !important;
-    border-color: rgba(125,211,252,0.4) !important;
-    color: {COLORS.ICE_BLUE} !important;
-}}
-
-label.svelte-19qdtil span.svelte-19qdtil {{
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1 !important;
-    display: block !important;
-    text-align: center !important;
-    width: 100% !important;
-}}
-
-/* Dropdown compacto */
-.svelte-1xfsv4t.container {{
-    min-height: unset !important;
-}}
-.wrap.svelte-1xfsv4t {{
-    min-height: unset !important;
-    padding: 4px 8px !important;
-}}
-
-/* Grupos invisibles ocultos */
-.gradio-group[style*="display: none"],
-.gradio-group.hidden {{
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-}}
-
-/* Botón guardar - amarillo */
+/* Botón guardar — amarillo (más específico, sobreescribe el secundario) */
 button.secondary.svelte-xzq5jh {{
     background: linear-gradient(135deg, {COLORS.WARNING}, #f59e0b) !important;
     color: {COLORS.BG_PRIMARY} !important;
     border: none !important;
     border-radius: 12px !important;
-    font-family: 'Space Grotesk', sans-serif !important;
     font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
     box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3) !important;
 }}
 
@@ -717,135 +650,29 @@ button.secondary.svelte-xzq5jh:hover {{
     filter: brightness(1.1) !important;
 }}
 
-/* Dropdown mismo estilo que radio */
-.wrap-inner.svelte-1xfsv4t {{
-    background: rgba(255,255,255,0.03) !important;
-    border: 1px solid rgba(125,211,252,0.15) !important;
-    border-radius: 8px !important;
-    padding: 6px 8px !important;
-    transition: all 0.2s ease !important;
-}}
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* HTML INYECTADO                                                              */
+/* ═══════════════════════════════════════════════════════════════════════════ */
 
-.wrap-inner.svelte-1xfsv4t:hover {{
-    background: rgba(125,211,252,0.08) !important;
-    border-color: rgba(125,211,252,0.3) !important;
-}}
-
-/* Texto del dropdown */
-.wrap-inner.svelte-1xfsv4t input {{
+.gradio-html {{
     background: transparent !important;
     border: none !important;
-    color: {COLORS.TEXT_PRIMARY} !important;
-    font-family: 'DM Sans', sans-serif !important;
-}}
-
-/* Flecha del dropdown */
-.dropdown-arrow {{
-    fill: {COLORS.ICE_BLUE} !important;
-    opacity: 0.6 !important;
-}}
-
-/* Quitar fondo gris del wrap externo del dropdown */
-.wrap.svelte-1xfsv4t {{
-    background: transparent !important;
-    border: none !important;
+    box-shadow: none !important;
     padding: 0 !important;
-    min-height: unset !important;
+    margin: 0 !important;
 }}
 
-.tab-container.svelte-11gaq1 {{
-    background: rgba(255,255,255,0.03) !important;
-    border-radius: 16px !important;
-    padding: 6px !important;
-    border: 1px solid rgba(125, 211, 252, 0.15) !important;
-}}
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* ANIMACIONES                                                                 */
+/* ═══════════════════════════════════════════════════════════════════════════ */
 
-button.svelte-11gaq1 {{
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 0.75em !important;
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    color: rgba(125, 211, 252, 0.6) !important;
-    border-radius: 12px !important;
-    padding: 12px 24px !important;
-    border: none !important;
-    background: transparent !important;
+@keyframes float {{
+    0%, 100% {{ transform: translateY(0px); }}
+    50% {{ transform: translateY(-10px); }}
 }}
-
-button.svelte-11gaq1:hover {{
-    color: rgba(125, 211, 252, 0.85) !important;
-    background: rgba(125, 211, 252, 0.05) !important;
-}}
-
-button.svelte-11gaq1.selected {{
-    color: {COLORS.ICE_BLUE} !important;
-    background: rgba(125, 211, 252, 0.12) !important;
-    box-shadow: 0 0 20px rgba(125, 211, 252, 0.15) !important;
-    font-weight: 600 !important;
-}}
-
-/* Text labels en HTML inyectado */
-.text-label {{
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 0.75em !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    color: {COLORS.ICE_BLUE} !important;
-    opacity: 0.9 !important;
-}}
-
-.tab-container.svelte-11gaq1::after {{
-    display: none !important;
-    border: none !important;
-}}
-
-.svelte-99kmwu,
-.gradio-container.svelte-99kmwu {{
-    background: {COLORS.BG_PRIMARY} !important;
-    background-color: {COLORS.BG_PRIMARY} !important;
-}}
-
-.tab-wrapper.svelte-11gaq1 {{
-    border-bottom: none !important;
-}}
-
-/* Label flotante de la imagen */
-label.svelte-19djge9 {{
-    color: {COLORS.ICE_BLUE} !important;
-    background: {COLORS.BG_SECONDARY} !important;
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 0.75em !important;
-}}
-
-/* Esquina blanca del contenedor imagen */
-.image-container.svelte-6uxbr3 {{
-    background: {COLORS.BG_SECONDARY} !important;
-}}
-
-/* Línea blanca debajo de la imagen */
-.upload-container.svelte-6uxbr3 {{
-    background: {COLORS.BG_SECONDARY} !important;
-}}
-
-/* Texto "uploading" y source selection */
-.source-selection.svelte-exvkcd {{
-    background: {COLORS.BG_SECONDARY} !important;
-}}
-
-.icon.svelte-exvkcd {{
-    color: {COLORS.ICE_BLUE} !important;
-    opacity: 0.6 !important;
-}}
-
-/* Botones de la imagen (fullscreen, remove) */
-.icon-button-wrapper.svelte-1pnho82 {{
-    background: transparent !important;
-}}
-
-.icon-button.svelte-3jwzs9 {{
-    background: {COLORS.BG_SECONDARY} !important;
-    color: {COLORS.ICE_BLUE} !important;
+@keyframes dotPulse {{
+    0%, 80%, 100% {{ transform: scale(0.6); opacity: 0.4; }}
+    40% {{ transform: scale(1); opacity: 1; box-shadow: 0 0 10px var(--ice-blue); }}
 }}
 
 """
