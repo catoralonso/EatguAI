@@ -263,7 +263,7 @@ class UIRenderer:
             ">
                 {icon}
             </div>
-            <p style="font-size:1.1em; margin:0 0 8px 0; color:var(--text-secondary);">
+            <p style="font-size:1.1em; margin:0 0 8px 0; color:{COLORS.ICE_BLUE};">
                 {message}
             </p>
             <p style="font-size:0.85em; margin:0; opacity:0.6;">{sub}</p>

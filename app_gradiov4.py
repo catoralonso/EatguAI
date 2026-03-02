@@ -56,11 +56,12 @@ def analizar_nevera(imagen, n_recetas, confianza, filtro_tiempo, filtro_faltan, 
 
     if imagen is None:
         yield (
-            renderer.render_empty_state("Sube una foto de tu nevera", "default"),
-            renderer.render_empty_state("Los resultados aparecerán aquí", "default"),
+            renderer.render_empty_state("Sube una foto para comenzar", "default"),
+            renderer.render_empty_state("Las recetas aparecerán aquí", "default"),
             {},
             gr.update(choices=[]),
             gr.update(visible=False),
+            gr.update(value="", visible=False),
         )
         return
 
@@ -71,6 +72,7 @@ def analizar_nevera(imagen, n_recetas, confianza, filtro_tiempo, filtro_faltan, 
         {},
         gr.update(choices=[]),
         gr.update(visible=False),
+        gr.update(value="", visible=False),
     )
 
     try:
@@ -95,6 +97,7 @@ def analizar_nevera(imagen, n_recetas, confianza, filtro_tiempo, filtro_faltan, 
                 {},
                 gr.update(choices=[]),
                 gr.update(visible=False),
+                gr.update(value="", visible=False),
             )
             return
 
@@ -205,7 +208,7 @@ def guardar_rating(receta_sel, gusto, relevancia, estado):
     )
     store.add_rating(rating)
     return gr.update(
-    value=f"<span style='color:var(--success);'>✅ Guardado: {receta_sel}</span>", visible=True)
+    value=f"<span style='color:var(--success);'>✅ Guardado: {receta_sel}</span>", visible=False)
 
 def mostrar_analytics():
     """Renderiza dashboard de sesión."""
@@ -791,6 +794,60 @@ button.svelte-11gaq1.selected {{
     color: {COLORS.ICE_BLUE} !important;
     opacity: 0.9 !important;
 }}
+
+.tab-container.svelte-11gaq1::after {{
+    display: none !important;
+    border: none !important;
+}}
+
+.svelte-99kmwu,
+.gradio-container.svelte-99kmwu {{
+    background: {COLORS.BG_PRIMARY} !important;
+    background-color: {COLORS.BG_PRIMARY} !important;
+}}
+
+.tab-wrapper.svelte-11gaq1 {{
+    border-bottom: none !important;
+}}
+
+/* Label flotante de la imagen */
+label.svelte-19djge9 {{
+    color: {COLORS.ICE_BLUE} !important;
+    background: {COLORS.BG_SECONDARY} !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0.75em !important;
+}}
+
+/* Esquina blanca del contenedor imagen */
+.image-container.svelte-6uxbr3 {{
+    background: {COLORS.BG_SECONDARY} !important;
+}}
+
+/* Línea blanca debajo de la imagen */
+.upload-container.svelte-6uxbr3 {{
+    background: {COLORS.BG_SECONDARY} !important;
+}}
+
+/* Texto "uploading" y source selection */
+.source-selection.svelte-exvkcd {{
+    background: {COLORS.BG_SECONDARY} !important;
+}}
+
+.icon.svelte-exvkcd {{
+    color: {COLORS.ICE_BLUE} !important;
+    opacity: 0.6 !important;
+}}
+
+/* Botones de la imagen (fullscreen, remove) */
+.icon-button-wrapper.svelte-1pnho82 {{
+    background: transparent !important;
+}}
+
+.icon-button.svelte-3jwzs9 {{
+    background: {COLORS.BG_SECONDARY} !important;
+    color: {COLORS.ICE_BLUE} !important;
+}}
+
 """
 
 # =============================================================================
@@ -809,7 +866,7 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
             with gr.Row():
 
                 # COLUMNA 1 — Modo e imagen
-                with gr.Column(scale=1, min_width=250):
+                with gr.Column(scale=1, min_width=200):
                     modo_radio   = gr.Radio(
                         choices=["survival", "chef"],
                         value="survival",
@@ -848,7 +905,7 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
             analizar_btn.click(
                 fn=analizar_nevera,
                 inputs=[imagen_input, n_slider, conf_radio, filtro_tiempo, filtro_faltan, modo_radio],
-                outputs=[out_ing, out_rec, estado_vals, receta_dd, val_group],
+                outputs=[out_ing, out_rec, estado_vals, receta_dd, val_group, msg_val],
             )
             guardar_btn.click(
                 fn=guardar_rating,
@@ -896,8 +953,8 @@ with gr.Blocks(title="🧊 Fridge Survival Guide Pro 🧊", theme=gr.themes.Base
             export_btn.click(fn=lambda: store.export_message(), outputs=export_txt)
 
     gr.HTML(f"""
-    <div style="text-align:center; padding:32px 20px; color:var(--text-muted);
-                font-size:0.82em; border-top:1px solid var(--border-subtle); margin-top:40px;">
+    <div style="text-align:center; padding:12px 20px; color:var(--text-muted);
+                font-size:0.75em; border-top:1px solid var(--border-subtle); margin-top:20px;">
         🧊 Fridge Survival Guide Pro · Sesión: {store.session.session_id}
     </div>
     """)
