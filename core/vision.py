@@ -147,6 +147,7 @@ def detectar_ingredientes(image_path: str) -> List[DetectedIngredient]:
     Lanza VisionError si algo falla.
     """
     raw = detect_gemini(image_path)
+    logger.info(f"RAW GEMINI RESPONSE: {raw}")
     return clean_ingredients(raw)
 
 

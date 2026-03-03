@@ -724,6 +724,10 @@ div.tabitem {{
     padding-top: 16px !important;
 }}
 
+div.tab-container.svelte-11gaq1::after {{
+    display: none !important;
+}}
+
 """
 
 # =============================================================================
@@ -847,7 +851,7 @@ with gr.Blocks(title="🧊 EatguAI 🧊", theme=gr.themes.Base(), css=CSS_CUSTOM
             Alonso Arredondo · Begoña Chamorro · Carolina Gamboa · Cesar Morales · Julián Álvarez
         </div>
         <div style="font-family:var(--font-data); font-size:1em; color:var(--text-muted);">
-            🧊 EatguAI 🧊 · Sesión: {store.session.session_id}
+            EatguAI · Sesión: {store.session.session_id}
         </div>
     </div>
     """)
@@ -856,7 +860,7 @@ with gr.Blocks(title="🧊 EatguAI 🧊", theme=gr.themes.Base(), css=CSS_CUSTOM
 if __name__ == "__main__":
     demo.launch(
         server_name="0.0.0.0",
-        server_port=7860,
+        server_port=7861,
         share=True,
         show_error=True,
         allowed_paths=["."],

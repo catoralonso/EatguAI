@@ -155,42 +155,45 @@ class UIRenderer:
         color  = config["color"]
     
         return f"""
-        <div style="text-align:center; padding:32px 30px 34px;">
+        <div style="text-align:center; padding:4px 25px 4px; display:flex; align-items:center; justify-content:flex-start; gap:14px; padding: 24px">
             <img src="data:image/png;base64,{LOGO_B64}" style="
-                display:block;
-                margin:0 auto 12px;
+                height:125px;
+                width:auto;
                 object-fit:contain;
-                filter:drop-shadow(0 0 20px rgba(120,200,255,0.6));
+                filter:drop-shadow(0 0 12px rgba(120,200,255,0.5));
+                flex-shrink:0;
             " alt="EatguAI"/>
-            <h1 style="
-                font-family:'Syne',sans-serif;
-                font-size:4.5em;
-                font-weight:800;
-                margin:0;
-                letter-spacing:3px;
-                color:#e8f4f8;
-                text-shadow:
-                    0 0 20px rgba(120,200,255,0.6),
-                    0 0 40px rgba(100,180,255,0.3);
-            ">
-                EatguAI
-            </h1>
-            <p style="
-                color:{color};
-                margin:10px 0 0;
-                font-size:1.1em;
-                letter-spacing:2px;
-                font-family:'DM Sans',sans-serif;
-                text-transform:uppercase;
-                opacity:0.85;
-            ">
-                {config["description"]}
-            </p>
-            <div style="
-                width:60%; height:1px; margin:16px auto 0;
-                background:linear-gradient(90deg, transparent, {color}80, transparent);
-            "></div>
+            <div style="text-align:left;">
+                <h1 style="
+                    font-family:'Syne',sans-serif;
+                    font-size:4.5em;
+                    font-weight:800;
+                    margin:0;
+                    letter-spacing:2px;
+                    color:#e8f4f8;
+                    text-shadow:
+                        0 0 20px rgba(120,200,255,0.6),
+                        0 0 40px rgba(100,180,255,0.3);
+                    line-height:1;
+                ">
+                    EatguAI
+                </h1>
+                <p style="
+                    color:{color};
+                    margin:10px 0 0;
+                    font-size:3.0 em;
+                    letter-spacing:2px;
+                    font-family:'DM Sans',sans-serif;
+                    text-transform:uppercase;
+                    opacity:0.85;
+                ">
+                    {config["description"]}
+                </p>
+            </div>
         </div>
+        <div style="width:60%; height:1px; margin:0 auto 8px;
+            background:linear-gradient(90deg, transparent, {color}80, transparent);
+        "></div>
         """
         
     @classmethod
