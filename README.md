@@ -1,4 +1,4 @@
-# 🧊 The Fridge Survival Guide
+# 🧊 EatguAI 🧊
 
 AI-powered fridge assistant that detects ingredients from a photo using Gemini Vision and recommends recipes using TF-IDF cosine similarity — built on Google Cloud Vertex AI.
 
