@@ -20,8 +20,8 @@ AI-powered fridge assistant that detects ingredients from a photo using Gemini V
 ## Setup
 ```bash
 # 1. Clone the repo
-git clone https://github.com/catoralonso/The-Fridge-Survival-Guide.git
-cd The-Fridge-Survival-Guide
+git clone https://github.com/catoralonso/EatguAI.git
+cd EatguAI
 pip install -r requirements.txt
 
 # 2. Google Cloud authentication
