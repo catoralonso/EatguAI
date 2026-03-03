@@ -731,7 +731,7 @@ div.tabitem {{
 # =============================================================================
 
 import base64
-with open("logo.png", "rb") as f:
+with open("logo_blanco.png", "rb") as f:
     LOGO_B64 = base64.b64encode(f.read()).decode()
 
 import components.ui_renderer as _ui_mod

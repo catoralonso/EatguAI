@@ -155,16 +155,16 @@ class UIRenderer:
         color  = config["color"]
     
         return f"""
-        <div style="text-align:center; padding:32px 20px 24px;">
+        <div style="text-align:center; padding:32px 30px 34px;">
             <img src="data:image/png;base64,{LOGO_B64}" style="
-                height:100px;
+                display:block;
+                margin:0 auto 12px;
                 object-fit:contain;
                 filter:drop-shadow(0 0 20px rgba(120,200,255,0.6));
-                margin-bottom:12px;
             " alt="EatguAI"/>
             <h1 style="
                 font-family:'Syne',sans-serif;
-                font-size:4em;
+                font-size:4.5em;
                 font-weight:800;
                 margin:0;
                 letter-spacing:3px;
