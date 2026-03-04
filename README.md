@@ -20,7 +20,7 @@ AI-powered fridge assistant that detects ingredients from a photo using Gemini V
 ## Setup
 ```bash
 # 1. Clone the repo
-git clone https://github.com/catoralonso/EatguAI.git
+git clone https://github.com/catoralonso/eatguai.git
 cd EatguAI
 pip install -r requirements.txt
 
