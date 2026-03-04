@@ -72,6 +72,9 @@ class Recipe(BaseModel):
     presentacion: Optional[str] = None
     chef_notes: Optional[str] = None
 
+    # Calidad del proceso
+    proceso_real: bool = True  # False si el proceso es texto de plantilla genérica
+
     @validator('nombre')
     def title_case(cls, v):
         return v.title()
