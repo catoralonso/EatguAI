@@ -63,7 +63,7 @@ EOF
 
 # 3. Set variables
 AR_REPO='eatguai'
-SERVICE_NAME='grupo2'
+SERVICE_NAME='eatguai'
 GOOGLE_CLOUD_PROJECT=$(gcloud config get-value project)
 GOOGLE_CLOUD_REGION='us-central1'
 
