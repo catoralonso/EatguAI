@@ -17,11 +17,11 @@ AI-powered fridge assistant that detects ingredients from a photo using Gemini V
 - **Interface:** Gradio
 - **Cloud:** Google Cloud Vertex AI Workbench
 
-## Setup
+## Setup for Virtual Machine en Vertex AI
 ```bash
 # 1. Clone the repo
 git clone https://github.com/catoralonso/eatguai.git
-cd EatguAI
+cd eatguai
 pip install -r requirements.txt
 
 # 2. Google Cloud authentication
@@ -40,10 +40,57 @@ python app_gradiov4.py
 
 > **Note:** On a new Qwiklabs lab the API takes 2-3 minutes to activate after step 3.
 > The app will enable it automatically on startup, but wait a few minutes before uploading a photo.
-## Project Structure
 
+## Setup for docker in CloudRun
+```bash
+# 1. Clone the Repo
+git clone https://github.com/catoralonso/eatguai.git
+cd eatguai
+
+# 2. Create Dockerfile
+cat > Dockerfile << 'EOF'
+FROM python:3.11-slim
+ENV PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+RUN mkdir -p data
+ENV PORT=8080
+EXPOSE 8080
+CMD ["python", "app_gradiov4.py"]
+EOF
+
+# 3. Set variables
+AR_REPO='eatguai'
+SERVICE_NAME='grupo2'
+GOOGLE_CLOUD_PROJECT=$(gcloud config get-value project)
+GOOGLE_CLOUD_REGION='us-central1'
+
+# 4. Create repository in artifact registry
+gcloud artifacts repositories create "$AR_REPO" \
+  --location="$GOOGLE_CLOUD_REGION" \
+  --repository-format=Docker
+
+# 5. API activation
+gcloud services enable aiplatform.googleapis.com run.googleapis.com
+
+# 6. Build and upload image
+gcloud builds submit --tag "$GOOGLE_CLOUD_REGION-docker.pkg.dev/$GOOGLE_CLOUD_PROJECT/$AR_REPO/$SERVICE_NAME"
+
+# 7. Launch CloudRun
+gcloud run deploy "$SERVICE_NAME" \
+  --image "$GOOGLE_CLOUD_REGION-docker.pkg.dev/$GOOGLE_CLOUD_PROJECT/$AR_REPO/$SERVICE_NAME" \
+  --platform managed \
+  --region "$GOOGLE_CLOUD_REGION" \
+  --allow-unauthenticated \
+  --memory 2Gi \
+  --set-env-vars "GOOGLE_CLOUD_PROJECT=$GOOGLE_CLOUD_PROJECT"
 ```
-The-Fridge-Survival-Guide/
+
+## Project Structure
+```
+eatguai/
 ├── app_gradiov4.py          → Application entry point 
 ├── config.py                → Centralized configuration (colors, routes, modes)
 ├── models.py                → Pydantic data validation models
@@ -97,4 +144,4 @@ The-Fridge-Survival-Guide/
 
 ## Dataset
 
-130+ Spanish recipes stored in `recetas_backend_proceso_ultra.json` with the following fields per recipe: key ingredients with quantities, step-by-step instructions, difficulty, time, calories, tags, and Chef Pro fields (techniques, pairing, plating notes).
+200+ Spanish recipes stored in `recetas_backend_proceso_ultra.json` with the following fields per recipe: key ingredients with quantities, step-by-step instructions, difficulty, time, calories, tags, and Chef Pro fields (techniques, pairing, plating notes).
