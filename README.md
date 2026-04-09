@@ -93,43 +93,14 @@ The app runs on **Google Cloud Run** (serverless, auto-scaling). Deploy pipeline
 # 1. Clone
 git clone https://github.com/catoralonso/eatguai.git && cd eatguai
 
-# 2. Create Dockerfile
-cat > Dockerfile << 'EOF'
-FROM python:3.11-slim
-ENV PYTHONUNBUFFERED=1
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
-RUN mkdir -p data
-ENV PORT=8080
-EXPOSE 8080
-CMD ["python", "app_gradiov4.py"]
-EOF
+# 2. Edit project ID
+cd infra/
+cp terraform.tfvars.example terraform.tfvars
+nano terraform.tfvars
 
-# 3. Set variables
-export AR_REPO='eatguai'
-export SERVICE_NAME='eatguai'
-export GOOGLE_CLOUD_PROJECT=$(gcloud config get-value project)
-export GOOGLE_CLOUD_REGION='us-central1'
-
-# 4. Create Artifact Registry repo
-gcloud artifacts repositories create "$AR_REPO" \
-  --location="$GOOGLE_CLOUD_REGION" --repository-format=Docker
-
-# 5. Enable APIs
-gcloud services enable aiplatform.googleapis.com run.googleapis.com
-
-# 6. Build and push
-gcloud builds submit \
-  --tag "$GOOGLE_CLOUD_REGION-docker.pkg.dev/$GOOGLE_CLOUD_PROJECT/$AR_REPO/$SERVICE_NAME"
-
-# 7. Deploy
-gcloud run deploy "$SERVICE_NAME" \
-  --image "$GOOGLE_CLOUD_REGION-docker.pkg.dev/$GOOGLE_CLOUD_PROJECT/$AR_REPO/$SERVICE_NAME" \
-  --platform managed --region "$GOOGLE_CLOUD_REGION" \
-  --allow-unauthenticated --memory 2Gi \
-  --set-env-vars "GOOGLE_CLOUD_PROJECT=$GOOGLE_CLOUD_PROJECT"
+# 3. Terraforming
+terraform init
+terraform apply -var-file="terraform.tfvars"
 ```
 
 ---
