@@ -23,7 +23,7 @@ WORKDIR /app
 COPY --from=builder /root/.local /root/.local
 
 # Copy application code
-COPY app_gradiov4.py config.py models.py ./
+COPY app_gradiov4.py config.py models.py logo_blanco.png logo.png ./
 COPY core/       ./core/
 COPY components/ ./components/
 
