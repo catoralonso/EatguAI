@@ -1,8 +1,10 @@
-# 🧊 EatguAI — AI Fridge Assistant
+# EatguAI — AI Fridge Assistant
 
 > Snap a photo of your fridge. Get ranked recipes in seconds.
 
 EatguAI combines **computer vision** and a **NLP-based recommendation engine** to detect ingredients from a fridge photo and suggest the best matching recipes — deployed as a production web app on Google Cloud Run.
+
+🔗 **[Live Demo](https://eatguai-naqwfs473q-uc.a.run.app/)**
 
 ---
 
