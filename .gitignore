@@ -1,7 +1,17 @@
-# Datos auto-generados (no subir)
+# Terraform
+infra/.terraform/
+infra/.terraform.lock.hcl
+infra/terraform.tfvars
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+
+# Data (generated at runtime)
 data/ratings.csv
 data/session_state.json
 data/app.log
+
+# Local ML models
+modelos_ml/
 
 # Python
 __pycache__/
@@ -12,6 +22,7 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Sistema
+# OS
 .DS_Store
-Thumbs.db.gradio/
+Thumbs.db
+.gradio/
