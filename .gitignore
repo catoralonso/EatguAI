@@ -1,4 +1,5 @@
 # Terraform
+infra/
 infra/.terraform/
 infra/.terraform.lock.hcl
 infra/terraform.tfvars
@@ -26,3 +27,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 .gradio/
+
+# HF
+releases/
+Dockerfile
