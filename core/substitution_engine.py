@@ -50,8 +50,8 @@ def expand_ingredients(ingredients: List[str]) -> Set[str]:
         response = _client.messages.create(
             model=CONFIG.VISION_MODEL,
             max_tokens=1024,
-    	    messages=[{"role": "user", "content": prompt}]
-	)
+            messages=[{"role": "user", "content": prompt}]
+        )
 	text = response.content[0].text
         mapping: Dict[str, List[str]] = json.loads(text)
 
