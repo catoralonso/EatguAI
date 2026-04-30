@@ -2,21 +2,10 @@
 Pydantic models for data validation.
 """
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 from enum import Enum
-
-
-class ConfidenceLevel(str, Enum):
-    BAJO = "Bajo"
-    MEDIO = "Medio"
-    ALTO = "Alto"
-
-class Difficulty(str, Enum):
-    FACIL = "Fácil"
-    MEDIA = "Media"
-    DIFICIL = "Difícil"
 
 class DetectedIngredient(BaseModel):
     """Ingredient detected by vision AI."""    
@@ -25,7 +14,8 @@ class DetectedIngredient(BaseModel):
     raw_detection: Optional[str] = None
     emoji: str = "🥘"
     
-    @validator('name')
+    @field_validator('name')
+    @classmethod
     def normalize(cls, v):
         return v.lower().strip()
     
@@ -71,13 +61,13 @@ class Recipe(BaseModel):
     # Quality process
     proceso_real: bool = True 
 
-    @validator('nombre')
+    @field_validator('nombre')
+    @classmethod
     def title_case(cls, v):
         return v.title()
-
+        
 class Recommendation(BaseModel):
-    """Recommendation results."""
-    
+    """Recommendation results."""    
     receta: Recipe
     porcentaje_match: float = Field(..., ge=0.0, le=1.0)
     coincidencias: List[str]
@@ -95,8 +85,7 @@ class Recommendation(BaseModel):
         return "low"
 
 class Rating(BaseModel):
-    """User rating"""
-    
+    """User rating"""    
     timestamp: datetime = Field(default_factory=datetime.now)
     receta: str
     match_pct: str
@@ -120,8 +109,7 @@ class Rating(BaseModel):
 
 
 class SessionState(BaseModel):
-    """Persistent session state."""
-    
+    """Persistent session state."""    
     session_id: str = Field(default_factory=lambda: datetime.now().strftime("%Y%m%d_%H%M%S"))
     created_at: datetime = Field(default_factory=datetime.now)
     last_activity: datetime = Field(default_factory=datetime.now)
