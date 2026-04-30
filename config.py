@@ -67,11 +67,8 @@ def _find_recipes_file() -> str:
     # Returns preffered path even if it doesn't exists (fallback with message error)
     return candidates[0]
 
-
 @dataclass
 class AppConfig:
-    """Configuración funcional de la aplicación."""
-
     # ── Gemini Key ────────────────────────────────────────────────────────
     GEMINI_API_KEY: str = field(default_factory=lambda: os.environ.get("GEMINI_API_KEY", ""))
 
