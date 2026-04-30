@@ -1,5 +1,5 @@
 """
-Modelos Pydantic para validación de datos.
+Pydantic models for data validation.
 """
 
 from pydantic import BaseModel, Field, validator
@@ -13,16 +13,13 @@ class ConfidenceLevel(str, Enum):
     MEDIO = "Medio"
     ALTO = "Alto"
 
-
 class Difficulty(str, Enum):
     FACIL = "Fácil"
     MEDIA = "Media"
     DIFICIL = "Difícil"
 
-
 class DetectedIngredient(BaseModel):
-    """Ingrediente detectado por visión computacional."""
-    
+    """Ingredient detected by vision AI."""    
     name: str = Field(..., min_length=1)
     confidence: float = Field(..., ge=0.0, le=1.0)
     raw_detection: Optional[str] = None
@@ -40,7 +37,6 @@ class DetectedIngredient(BaseModel):
         elif self.confidence >= 0.65:
             return COLORS.WARNING
         return COLORS.ERROR
-
 
 class RecipeIngredient(BaseModel):
     item: str
@@ -66,21 +62,21 @@ class Recipe(BaseModel):
     dificultad: Optional[str] = None
     calorias_aprox: Optional[int] = None
 
-    # Campos Chef Pro
+    # Chef Pro
     tecnicas: List[str] = Field(default_factory=list)
     maridaje: Optional[str] = None
     presentacion: Optional[str] = None
     chef_notes: Optional[str] = None
 
-    # Calidad del proceso
-    proceso_real: bool = True  # False si el proceso es texto de plantilla genérica
+    # Quality process
+    proceso_real: bool = True 
 
     @validator('nombre')
     def title_case(cls, v):
         return v.title()
 
 class Recommendation(BaseModel):
-    """Resultado de recomendación."""
+    """Recommendation results."""
     
     receta: Recipe
     porcentaje_match: float = Field(..., ge=0.0, le=1.0)
@@ -98,9 +94,8 @@ class Recommendation(BaseModel):
             return "medium"
         return "low"
 
-
 class Rating(BaseModel):
-    """Valoración de usuario."""
+    """User rating"""
     
     timestamp: datetime = Field(default_factory=datetime.now)
     receta: str
@@ -125,7 +120,7 @@ class Rating(BaseModel):
 
 
 class SessionState(BaseModel):
-    """Estado de sesión persistente."""
+    """Persistent session state."""
     
     session_id: str = Field(default_factory=lambda: datetime.now().strftime("%Y%m%d_%H%M%S"))
     created_at: datetime = Field(default_factory=datetime.now)
