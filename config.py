@@ -12,7 +12,7 @@ import os
 @dataclass(frozen=True)
 class Colors:
     """Palette inspired by ice, soft neon and deep darkness."""
-
+    BG_PRIMARY:    str = "#0a0a0f"
     BG_SECONDARY:  str = "#13131f"
     BG_TERTIARY:   str = "#0f0f1a"
 
