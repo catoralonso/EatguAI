@@ -1,13 +1,13 @@
 """
-Detección de ingredientes usando Gemini vía Vertex AI.
+Ingredient detection using Gemini.
 """
 import json
 import logging
 import unicodedata
 from typing import List, Dict, Any
 
-import vertexai
-from vertexai.generative_models import GenerativeModel, Image as VertexImage
+import base64
+import google.generativeai as genai
 
 from config import CONFIG
 from models import DetectedIngredient
@@ -15,11 +15,11 @@ from models import DetectedIngredient
 logger = logging.getLogger(__name__)
 
 # ============================================================================
-# INICIALIZACIÓN VERTEX AI
+# INICIALIZACIÓN GEMINI
 # ============================================================================
 
-vertexai.init(project=CONFIG.VERTEX_PROJECT_ID, location=CONFIG.VERTEX_LOCATION)
-_model = GenerativeModel(CONFIG.GEMINI_MODEL)
+genai.configure(api_key=CONFIG.GEMINI_API_KEY)
+_model = genai.GenerativeModel(CONFIG.GEMINI_MODEL)
 
 PROMPT = """
 Eres un asistente especializado en identificar ingredientes de cocina en imágenes de neveras.
@@ -55,7 +55,7 @@ REGLAS para "emoji":
 """
 
 # ============================================================================
-# NORMALIZACIÓN (del vision.py original)
+# NORMALIZE (del vision.py original)
 # ============================================================================
 
 def _normalize(name: str) -> str:
@@ -69,18 +69,26 @@ def _normalize(name: str) -> str:
     return n
 
 # ============================================================================
-# DETECCIÓN
+# DETECT GEMINI
 # ============================================================================
 
 class VisionError(Exception):
     pass
 
 def detect_gemini(image_path: str) -> List[Dict[str, Any]]:
-    """Envía la imagen a Gemini vía Vertex AI y devuelve lista raw."""
+    """Sends the image to Gemini and returns raw ingredient list."""
     try:
-        image = VertexImage.load_from_file(image_path)
+        with open(image_path, "rb") as f:
+            image_data = base64.b64encode(f.read()).decode()
+        
+        image_part = {
+            "inline_data": {
+                "mime_type": "image/jpeg",
+                "data": image_data,
+            }
+        }
         response = _model.generate_content(
-            [PROMPT, image],
+            [PROMPT, image_part],
             generation_config={"temperature": 0.1},
         )
         text = response.text.replace("```json", "").replace("```", "").strip()
@@ -91,18 +99,17 @@ def detect_gemini(image_path: str) -> List[Dict[str, Any]]:
         logger.error(f"Gemini devolvió JSON inválido: {e}")
         raise VisionError(f"Respuesta de Gemini no es JSON válido: {e}")
     except Exception as e:
-        logger.error(f"Error llamando a Vertex AI: {e}")
+        logger.error(f"Error calling Gemini API: {e}")
         raise VisionError(str(e))
 
 # ============================================================================
-# LIMPIEZA Y VALIDACIÓN
+# CLEANING & VALIDATION
 # ============================================================================
 
 def clean_ingredients(
     raw: List[Dict[str, Any]],
     min_confidence: float = CONFIG.DEFAULT_CONFIDENCE,
 ) -> List[DetectedIngredient]:
-    """Filtra, deduplica y valida ingredientes. Devuelve modelos Pydantic."""
     seen = set()
     cleaned = []
 
@@ -138,13 +145,13 @@ def clean_ingredients(
     return cleaned
 
 # ============================================================================
-# FUNCIÓN PRINCIPAL (interfaz pública)
+# MAIN FUNCTION                      
 # ============================================================================
 
 def detectar_ingredientes(image_path: str) -> List[DetectedIngredient]:
     """
-    Función principal. Recibe path de imagen, devuelve lista de DetectedIngredient.
-    Lanza VisionError si algo falla.
+    Main function gets image path, return list of DetectedIngredient.
+    Fallback to VisionError if fails.
     """
     raw = detect_gemini(image_path)
     logger.info(f"RAW GEMINI RESPONSE: {raw}")
@@ -152,13 +159,13 @@ def detectar_ingredientes(image_path: str) -> List[DetectedIngredient]:
 
 
 # ============================================================================
-# PRUEBA RÁPIDA
+# FOR TESTING PRE DEMO
 # ============================================================================
 
 if __name__ == "__main__":
     import sys
     img = sys.argv[1] if len(sys.argv) > 1 else "foto_nevera.png"
-    print(f"\n🔍 Analizando: {img}\n")
+    print(f"\n Analizando: {img}\n")
     ingredientes = detectar_ingredientes(img)
     print(f"INGREDIENTES DETECTADOS ({len(ingredientes)}):")
     for i in ingredientes:
