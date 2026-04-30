@@ -52,13 +52,11 @@ def expand_ingredients(ingredients: List[str]) -> Set[str]:
             max_tokens=1024,
             messages=[{"role": "user", "content": prompt}]
         )
-		text = response.content[0].text
+        text = response.content[0].text
         mapping: Dict[str, List[str]] = json.loads(text)
-
         expanded = base_set.copy()
         for substitutes in mapping.values():
             expanded.update(s.lower().strip() for s in substitutes)
-
         logger.info(f"Expanded {len(base_set)} ingredients to {len(expanded)} with substitutions")
         _cache[cache_key] = expanded
         return expanded
