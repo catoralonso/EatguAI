@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from config import CONFIG
 from models import Recipe, RecipeIngredient, Recommendation
-from substitution_engine import expand_ingredients
+from core.substitution_engine import expand_ingredients
 
 logger = logging.getLogger(__name__)
 
@@ -185,10 +185,7 @@ class RecipeRecommender:
 
             n_base_found = sum(1 for b in recipe.ingredientes_base if _normalize(b) in available_set)
             score_total = (n_found * 1000) + (n_base_found * 50) + (match_pct * 100) + float(similarities[idx])
-
-            # Bonus por calidad: recetas con proceso real se muestran primero
-            if recipe.proceso_real:
-                score_total += 50
+            
             # Bonus/penalización por dificultad según modo
             dificultad_bonus = CONFIG.get_mode(modo).get("dificultad_bonus", {})
             score_total += dificultad_bonus.get(recipe.dificultad or "media", 0)
@@ -215,15 +212,18 @@ class RecipeRecommender:
         available: List[str],
     ) -> List[Tuple[str, str]]:
         """
-        Devuelve pares (ingrediente_faltante, sustituto_disponible).
-        Para mostrar en la tarjeta de receta.
+    Returns (missing_ingredient, available_substitute) pairs for UI display.
+    Uses the expanded set already computed by substitution_engine.
         """
-        available_set = {_normalize(i) for i in available}
+        expanded = expand_ingredients(available)
+        suggestions = []
+        base_set = {_normalize(i) for i in available}
         suggestions = []
         for faltante in rec.ingredientes_faltantes:
-            needed_norm = _normalize(faltante.item)
-            for sust in SUSTITUCIONES.get(needed_norm, []):
-                if _normalize(sust) in available_set:
-                    suggestions.append((faltante.item, sust))
+            norm = _normalize(faltante.item)
+            if norm in expanded and norm not in base_set:
+                # find which original ingredient covers it
+                for orig in available:
+                    suggestions.append((faltante.item, orig))
                     break
         return suggestions
