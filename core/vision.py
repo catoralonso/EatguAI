@@ -15,7 +15,7 @@ from models import DetectedIngredient
 logger = logging.getLogger(__name__)
 
 # ============================================================================
-# INICIALIZACIÓN GEMINI
+# GEMINI API INIT
 # ============================================================================
 
 genai.configure(api_key=CONFIG.GEMINI_API_KEY)
