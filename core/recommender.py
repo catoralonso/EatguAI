@@ -1,5 +1,5 @@
 """
-Sistema de recomendación de recetas.
+Recipe recomendation system
 """
 import json
 import logging
@@ -12,16 +12,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from config import CONFIG
 from models import Recipe, RecipeIngredient, Recommendation
+from substitution_engine import expand_ingredients
 
 logger = logging.getLogger(__name__)
 
 
 class RecommenderError(Exception):
     pass
-
-
 # ============================================================================
-# NORMALIZACIÓN
+# NORMALIZE
 # ============================================================================
 
 def _normalize(text: str) -> str:
@@ -34,98 +33,11 @@ def _normalize(text: str) -> str:
         n = n[:-1]
     return n
 
-
-# ============================================================================
-# SUSTITUCIONES
-# ============================================================================
-
-SUSTITUCIONES: Dict[str, List[str]] = {
-    # Lácteos
-    "nata":              ["crema de leche", "leche evaporada", "yogur griego"],
-    "leche":             ["bebida de avena", "bebida de soja", "bebida de almendra"],
-    "mantequilla":       ["aceite", "margarina", "aceite de coco"],
-    "queso":             ["queso fresco", "requesón", "ricotta"],
-    "nata agria":        ["yogur natural", "crema de leche con limon"],
-    "queso crema":       ["yogur griego", "requesón"],
-    "yogur":             ["kefir", "nata agria", "leche con limon"],
-
-    # Proteínas
-    "huevo":             ["aquafaba", "platano maduro", "semillas de chia con agua"],
-    "carne picada":      ["soja texturizada", "lenteja cocida", "tofu desmenuzado"],
-    "pollo":             ["pavo", "conejo", "tofu firme"],
-    "carne de cerdo":    ["pollo", "pavo", "seitán"],
-    "bacalao":           ["merluza", "pescadilla", "cualquier pescado blanco"],
-    "atun lata":         ["sardinillas", "caballa en lata", "salmon ahumado"],
-    "jamon":             ["pavo en lonchas", "bacon", "cecina"],
-
-    # Aromáticos y condimentos
-    "ajo":               ["ajo en polvo", "cebollino", "asafetida"],
-    "cebolla":           ["puerro", "cebolleta", "cebolla en polvo"],
-    "tomate frito":      ["tomate natural triturado", "tomate concentrado", "sofrito"],
-    "limon":             ["vinagre de manzana", "lima", "naranja"],
-    "vino blanco":       ["caldo de pollo", "zumo de limon", "vinagre blanco diluido"],
-    "vino tinto":        ["caldo de carne", "zumo de uva", "vinagre tinto diluido"],
-    "salsa de soja":     ["tamari", "aminoacidos de coco", "worcestershire"],
-
-    # Harinas y espesantes
-    "harina de trigo":   ["harina universal", "harina de maiz", "harina de arroz"],
-    "pan rallado":       ["avena molida", "crackers triturados", "harina de maiz"],
-    "maicena":           ["fecula de patata", "arrurruz", "harina de arroz"],
-
-    # Endulzantes
-    "azucar":            ["miel", "jarabe de agave", "azucar de coco"],
-    "miel":              ["azucar", "jarabe de arce", "melaza"],
-
-    # Verduras
-    "patata":            ["boniato", "nabo", "colinabo"],
-    "calabacin":         ["pepino", "calabaza", "berenjena"],
-    "pimiento rojo":     ["pimiento amarillo", "tomate", "zanahoria asada"],
-    "espinaca":          ["acelga", "col rizada", "canónigos"],
-    "caldo de pollo":    ["agua con pastilla de caldo", "caldo vegetal", "agua con miso"],
-    "caldo de carne":    ["agua con pastilla", "caldo de pollo", "agua con soja"],
-
-    # Extras
-    "pan":               ["tortilla de trigo", "pan de molde", "baguette"],
-    "arroz":             ["quinoa", "cuscus", "bulgur"],
-    "pasta":             ["espirales", "macarrones", "fideos"],
-    "aceite de oliva":   ["aceite de girasol", "aceite de coco"],
-}
-
-
-def _has_sustitucion(needed: str, available_set: set) -> bool:
-    """Comprueba si hay algún sustituto disponible para un ingrediente."""
-    needed_norm = _normalize(needed)
-    for sust in SUSTITUCIONES.get(needed_norm, []):
-        if _normalize(sust) in available_set:
-            return True
-    return False
-
-# ============================================================================
-# DETECCIÓN DE RECETAS GENÉRICAS
-# ============================================================================
-
-MARCADORES_GENERICOS = [
-    "segun el tipo de receta",
-    "cocinar o mezclar los ingredientes",
-    "preparar y mezclar los ingredientes principales",
-    "añadir ingredientes base y ajustar sal",
-]
-
-
-def _tiene_proceso_real(proceso_detallado: List[str]) -> bool:
-    """Devuelve True si el proceso tiene pasos reales, no texto de plantilla."""
-    if not proceso_detallado or len(proceso_detallado) < 3:
-        return False
-    texto = " ".join(proceso_detallado).lower()
-    return not any(m in texto for m in MARCADORES_GENERICOS)
-
-
 # ============================================================================
 # CLASE PRINCIPAL
 # ============================================================================
 
 class RecipeRecommender:
-
     def __init__(self, recipes_path: str = None):
         self.recipes_path = recipes_path or CONFIG.RECIPES_FILE
         self.recipes: List[Recipe] = []
@@ -137,7 +49,6 @@ class RecipeRecommender:
         logger.info(f"Recommender listo con {len(self.recipes)} recetas")
 
     # ── Carga ────────────────────────────────────────────────────────────────
-
     def _load_recipes(self):
         try:
             with open(self.recipes_path, "r", encoding="utf-8") as f:
@@ -174,7 +85,6 @@ class RecipeRecommender:
             maridaje=raw.get("maridaje"),
             presentacion=raw.get("presentacion"),
             chef_notes=raw.get("chef_notes"),
-            proceso_real=_tiene_proceso_real(proceso_det),
         )
 
     # ── TF-IDF ───────────────────────────────────────────────────────────────
@@ -205,21 +115,15 @@ class RecipeRecommender:
                 return True
         return False
 
-    def _calculate_match(
-        self,
-        recipe: Recipe,
-        available_set: set,
-    ) -> Tuple[List[str], List[RecipeIngredient]]:
+    def _calculate_match(self, recipe, available_set):
         found, missing = [], []
         for ing in recipe.ingredientes_clave:
             if self._ingredient_match(ing.item, available_set):
                 found.append(ing.item)
-            elif _has_sustitucion(ing.item, available_set):
-                found.append(f"{ing.item} (sustituible)")
             else:
                 missing.append(ing)
         return found, missing
-
+        
     # ── Filtros ──────────────────────────────────────────────────────────────
 
     def _apply_filtros(
@@ -260,7 +164,7 @@ class RecipeRecommender:
           3. TF-IDF como desempate
         En modo survival filtra recetas con más de 2 faltantes.
         """
-        available_set = {_normalize(i) for i in ingredients}
+        available_set = expand_ingredients(ingredients) 
         query_vec     = self.vectorizer.transform([" ".join(available_set)])
         similarities  = cosine_similarity(query_vec, self.tfidf_matrix).flatten()
 
