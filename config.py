@@ -74,7 +74,7 @@ class AppConfig:
 
     # ── Paths ────────────────────────────────────────────────────────────────
     DATA_DIR:      str = "data"
-    RECIPES_FILE:  str = "data/recetas_backend_proceso_ultra.json"
+    RECIPES_FILE:  str = field(default_factory=_find_recipes_file"
     RATINGS_FILE:  str = "data/ratings.csv"
     SESSION_FILE:  str = "data/session_state.json"
     LOG_FILE:      str = "data/app.log"
