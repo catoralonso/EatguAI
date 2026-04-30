@@ -9,6 +9,7 @@ from google import genai
 from config import CONFIG
 
 logger = logging.getLogger(__name__)
+_client = genai.Client(api_key=CONFIG.GEMINI_API_KEY)
 
 SUBSTITUTION_PROMPT = """
 You are a professional chef assistant. Given a list of available ingredients
