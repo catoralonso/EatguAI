@@ -1,3 +1,14 @@
+---
+title: EatguAI
+emoji: 🧊
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+sdk_version: 4.44.0
+app_file: app.py
+pinned: false
+---
+
 # EatguAI — AI Fridge Assistant
 
 > Snap a photo of your fridge. Get ranked recipes in seconds.
