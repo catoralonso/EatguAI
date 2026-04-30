@@ -1,15 +1,15 @@
 """
-Ingredient substitution engine powered by Gemini.
+Ingredient substitution engine powered by Anthropic.
 One API call expands the available ingredient set before scoring.
 """
 import json
 import logging
 from typing import Dict, List, Set
-from google import genai
+import anthropic
 from config import CONFIG
 
 logger = logging.getLogger(__name__)
-_client = genai.Client(api_key=CONFIG.GEMINI_API_KEY)
+_client = anthropic.Anthropic(api_key=CONFIG.ANTHROPIC_API_KEY)
 
 SUBSTITUTION_PROMPT = """
 You are a professional chef assistant. Given a list of available ingredients
@@ -47,12 +47,12 @@ def expand_ingredients(ingredients: List[str]) -> Set[str]:
 
     try:
         prompt = SUBSTITUTION_PROMPT.format(ingredients=json.dumps(ingredients, ensure_ascii=False))
-        response = _client.models.generate_content(
-           model=CONFIG.GEMINI_MODEL,
-           contents=[PROMPT, image_part],
-           config={"temperature": 0.1},
-        )
-        text = response.text.replace("```json", "").replace("```", "").strip()
+        response = _client.messages.create(
+            model=CONFIG.VISION_MODEL,
+            max_tokens=1024,
+    	    messages=[{"role": "user", "content": prompt}]
+	)
+	text = response.content[0].text
         mapping: Dict[str, List[str]] = json.loads(text)
 
         expanded = base_set.copy()

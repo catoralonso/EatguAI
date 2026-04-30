@@ -1,5 +1,5 @@
 """
-Ingredient detection using Gemini.
+Ingredient detection using Claude.
 """
 import json
 import logging
@@ -7,18 +7,13 @@ import unicodedata
 from typing import List, Dict, Any
 
 import base64
-from google import genai
+import anthropic
 
 from config import CONFIG
 from models import DetectedIngredient
 
 logger = logging.getLogger(__name__)
-
-# ============================================================================
-# GEMINI API INIT
-# ============================================================================
-
-_client = genai.Client(api_key=CONFIG.GEMINI_API_KEY)
+_client = anthropic.Anthropic(api_key=CONFIG.ANTHROPIC_API_KEY)
 
 PROMPT = """
 Eres un asistente especializado en identificar ingredientes de cocina en imágenes de neveras.
@@ -68,38 +63,48 @@ def _normalize(name: str) -> str:
     return n
 
 # ============================================================================
-# DETECT GEMINI
+# DETECT INGREDIENTS
 # ============================================================================
 
 class VisionError(Exception):
     pass
 
-def detect_gemini(image_path: str) -> List[Dict[str, Any]]:
-    """Sends the image to Gemini and returns raw ingredient list."""
+def detect_ingredients(image_path: str) -> List[Dict[str, Any]]:
+    """Sends image to Claude and returns raw ingredient list."""
     try:
         with open(image_path, "rb") as f:
             image_data = base64.b64encode(f.read()).decode()
-        
-        image_part = {
-            "inline_data": {
-                "mime_type": "image/jpeg",
-                "data": image_data,
-            }
-        }
-        response = _client.models.generate_content(
-            model=CONFIG.GEMINI_MODEL,
-            contents=[PROMPT, image_part],
-            config={"temperature": 0.1},
+
+        response = _client.messages.create(
+            model=CONFIG.VISION_MODEL,
+            max_tokens=1024,
+            messages=[{
+                "role": "user",
+                "content": [
+                    {
+                        "type": "image",
+                        "source": {
+                            "type": "base64",
+                            "media_type": "image/jpeg",
+                            "data": image_data,
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": PROMPT
+                    }
+                ]
+            }]
         )
-        text = response.text.replace("```json", "").replace("```", "").strip()
+        text = response.content[0].text.replace("```json", "").replace("```", "").strip()
         result = json.loads(text)
-        logger.info(f"Gemini detectó {len(result)} ingredientes en bruto")
+        logger.info(f"Claude detected {len(result)} raw ingredients")
         return result
     except json.JSONDecodeError as e:
-        logger.error(f"Gemini devolvió JSON inválido: {e}")
-        raise VisionError(f"Respuesta de Gemini no es JSON válido: {e}")
+        logger.error(f"Claude returned invalid JSON: {e}")
+        raise VisionError(f"Claude response is not valid JSON: {e}")
     except Exception as e:
-        logger.error(f"Error calling Gemini API: {e}")
+        logger.error(f"Error calling Anthropic API: {e}")
         raise VisionError(str(e))
 
 # ============================================================================
@@ -153,8 +158,8 @@ def detectar_ingredientes(image_path: str) -> List[DetectedIngredient]:
     Main function gets image path, return list of DetectedIngredient.
     Fallback to VisionError if fails.
     """
-    raw = detect_gemini(image_path)
-    logger.info(f"RAW GEMINI RESPONSE: {raw}")
+    raw = detect_ingredients(image_path)
+    logger.info(f"RAW CLAUDE RESPONSE: {raw}")
     return clean_ingredients(raw)
 
 

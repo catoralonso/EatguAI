@@ -17,7 +17,7 @@ python_version: "3.11"
 EatguAI combines **computer vision** and a **NLP-based recommendation engine** to detect ingredients from a fridge photo and suggest the best matching recipes — deployed as a production web app on Google Cloud Run.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-Vertex_AI-4285F4?logo=google&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude_Sonnet-Anthropic-D97757?logo=anthropic&logoColor=white)
 ![Cloud Run](https://img.shields.io/badge/Cloud_Run-Deployed-34A853?logo=googlecloud&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Infra-Terraform-7B42BC?logo=terraform&logoColor=white)
 
@@ -28,16 +28,16 @@ EatguAI combines **computer vision** and a **NLP-based recommendation engine** t
 
 **The problem:** Traditional recipe apps require you to type ingredients manually. That's friction nobody wants.
 
-**The solution:** Upload one photo → Gemini Vision identifies every ingredient → a TF-IDF recommender ranks 300 recipes by match score → you get step-by-step instructions in under 5 seconds.
+**The solution:** Upload one photo → Claude Vision identifies every ingredient → a TF-IDF recommender ranks 300 recipes by match score → you get step-by-step instructions in under 5 seconds.
 
-**Key architectural decision:** Instead of training a custom YOLO model (explored and discarded due to dataset constraints and overfitting), we pivoted to zero-shot inference via Gemini 2.0 Flash. This eliminated the need for a labeled dataset, removed GPU dependency, and made the system generalizable to any real-world fridge photo.
+**Key architectural decision:** Instead of training a custom YOLO model (explored and discarded due to dataset constraints and overfitting), we pivoted to zero-shot inference via Claude. This eliminated the need for a labeled dataset, removed GPU dependency, and made the system generalizable to any real-world fridge photo.
 
 ---
 
 ## System Architecture
 
 ```
-Photo → [Gemini 2.0 Flash / Vertex AI] → ingredient list
+Photo → [Claude Sonnet / Vertex AI] → ingredient list
                                               ↓
                                [TF-IDF + Cosine Similarity]
                                               ↓
@@ -52,7 +52,7 @@ Photo → [Gemini 2.0 Flash / Vertex AI] → ingredient list
 
 | Layer | Technology |
 |-------|-----------|
-| Vision | Gemini 2.0 Flash via Vertex AI (zero-shot) |
+| Vision | Claude Sonnet |
 | Recommendation | TF-IDF vectorization + Cosine Similarity (scikit-learn) |
 | Scoring | Weighted ingredient matching + difficulty bonus per mode |
 | Validation | Pydantic v2 |
@@ -87,7 +87,7 @@ eatguai/
 ├── models.py             → Pydantic v2 data models
 │
 ├── core/
-│   ├── vision.py         → Gemini Vision detection + ingredient normalization
+│   ├── vision.py         → Claude Vision detection + ingredient normalization
 │   └── recommender.py    → TF-IDF engine with weighted scoring
 │
 ├── components/

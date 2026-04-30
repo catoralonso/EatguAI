@@ -13,8 +13,6 @@ import os
 class Colors:
     """Palette inspired by ice, soft neon and deep darkness."""
 
-    # Background
-    BG_PRIMARY:    str = "#0a0a0f"
     BG_SECONDARY:  str = "#13131f"
     BG_TERTIARY:   str = "#0f0f1a"
 
@@ -69,8 +67,8 @@ def _find_recipes_file() -> str:
 
 @dataclass
 class AppConfig:
-    # ── Gemini Key ────────────────────────────────────────────────────────
-    GEMINI_API_KEY: str = field(default_factory=lambda: os.environ.get("GEMINI_API_KEY", ""))
+    # ── Anthropic Key ────────────────────────────────────────────────────────
+    ANTHROPIC_API_KEY: str = field(default_factory=lambda: os.environ.get("ANTHROPIC_API_KEY", ""))
 
     # ── Paths ────────────────────────────────────────────────────────────────
     DATA_DIR:      str = "data"
@@ -79,8 +77,8 @@ class AppConfig:
     SESSION_FILE:  str = "data/session_state.json"
     LOG_FILE:      str = "data/app.log"
 
-    # ── Gemini / Vision ──────────────────────────────────────────────────────
-    GEMINI_MODEL:       str   = "gemini-2.0-flash"
+    # ── Anthropic / Vision ──────────────────────────────────────────────────────
+    VISION_MODEL: str = field(default_factory=lambda: os.environ.get("VISION_MODEL", "claude-sonnet-4-5"))
     DEFAULT_CONFIDENCE: float = 0.5
     MAX_INGREDIENTS:    int   = 20
 
