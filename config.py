@@ -80,7 +80,7 @@ class AppConfig:
     LOG_FILE:      str = "data/app.log"
 
     # ── Gemini / Vision ──────────────────────────────────────────────────────
-    GEMINI_MODEL:       str   = "gemini-2.0-flash-001"
+    GEMINI_MODEL:       str   = "gemini-2.0-flash"
     DEFAULT_CONFIDENCE: float = 0.5
     MAX_INGREDIENTS:    int   = 20
 
