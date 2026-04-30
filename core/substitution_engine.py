@@ -5,7 +5,7 @@ One API call expands the available ingredient set before scoring.
 import json
 import logging
 from typing import Dict, List, Set
-import google.generativeai as genai
+from google import genai
 from config import CONFIG
 
 logger = logging.getLogger(__name__)
@@ -45,11 +45,11 @@ def expand_ingredients(ingredients: List[str]) -> Set[str]:
     base_set = {i.lower().strip() for i in ingredients}
 
     try:
-        model = genai.GenerativeModel(CONFIG.GEMINI_MODEL)
         prompt = SUBSTITUTION_PROMPT.format(ingredients=json.dumps(ingredients, ensure_ascii=False))
-        response = model.generate_content(
-            prompt,
-            generation_config={"temperature": 0.2},
+        response = _client.models.generate_content(
+           model=CONFIG.GEMINI_MODEL,
+           contents=[PROMPT, image_part],
+           config={"temperature": 0.1},
         )
         text = response.text.replace("```json", "").replace("```", "").strip()
         mapping: Dict[str, List[str]] = json.loads(text)

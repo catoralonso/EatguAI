@@ -7,7 +7,7 @@ import unicodedata
 from typing import List, Dict, Any
 
 import base64
-import google.generativeai as genai
+from google import genai
 
 from config import CONFIG
 from models import DetectedIngredient
@@ -18,8 +18,7 @@ logger = logging.getLogger(__name__)
 # GEMINI API INIT
 # ============================================================================
 
-genai.configure(api_key=CONFIG.GEMINI_API_KEY)
-_model = genai.GenerativeModel(CONFIG.GEMINI_MODEL)
+_client = genai.Client(api_key=CONFIG.GEMINI_API_KEY)
 
 PROMPT = """
 Eres un asistente especializado en identificar ingredientes de cocina en imágenes de neveras.
@@ -87,9 +86,10 @@ def detect_gemini(image_path: str) -> List[Dict[str, Any]]:
                 "data": image_data,
             }
         }
-        response = _model.generate_content(
-            [PROMPT, image_part],
-            generation_config={"temperature": 0.1},
+        response = _client.models.generate_content(
+            model=CONFIG.GEMINI_MODEL,
+            contents=[PROMPT, image_part],
+            config={"temperature": 0.1},
         )
         text = response.text.replace("```json", "").replace("```", "").strip()
         result = json.loads(text)
