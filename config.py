@@ -1,48 +1,48 @@
 """
-Configuración centralizada de eatguai.
-Colores, umbrales y comportamiento.
+Centralized configuration for EatguAI.
+Colors, thresholds and app behaviour.
 """
 from dataclasses import dataclass, field
 from typing import Dict
 import os
 
 # ============================================================================
-# PALETA DE COLORES - Nevera de Noche
+# COLOR PALETTE - NIGHT FRIDGE MODE
 # ============================================================================
 @dataclass(frozen=True)
 class Colors:
-    """Paleta inspirada en hielo, neón suave y oscuridad profunda."""
+    """Palette inspired by ice, soft neon and deep darkness."""
 
-    # Fondos
+    # Background
     BG_PRIMARY:    str = "#0a0a0f"
     BG_SECONDARY:  str = "#13131f"
     BG_TERTIARY:   str = "#0f0f1a"
 
-    # Acentos
+    # Accents
     ICE_BLUE:      str = "#7dd3fc"
     ICE_GLOW:      str = "rgba(125, 211, 252, 0.15)"
     PURPLE_NEBULA: str = "#a78bfa"
     TEAL_AURORA:   str = "#14b8a6"
 
-    # Estados
+    # States
     SUCCESS: str = "#34d399"
     WARNING: str = "#fbbf24"
     ERROR:   str = "#f87171"
     INFO:    str = "#60a5fa"
 
-    # Texto
+    # Text
     TEXT_PRIMARY:   str = "#f8fafc"
     TEXT_SECONDARY: str = "#94a3b8"
     TEXT_MUTED:     str = "#64748b"
 
-    # Bordes y efectos
+    # Borders and effects
     BORDER_GLOW:   str = "rgba(125, 211, 252, 0.25)"
     BORDER_SUBTLE: str = "rgba(255, 255, 255, 0.08)"
     SHADOW_ICE:    str = "0 0 20px rgba(125, 211, 252, 0.15)"
 
 
 # ============================================================================
-# TIPOGRAFÍA
+# TYPOGRAPHY
 # ============================================================================
 @dataclass(frozen=True)
 class Typography:
@@ -53,10 +53,10 @@ class Typography:
 
 
 # ============================================================================
-# CONFIGURACIÓN DE APP
+# APP CONFIGURATION
 # ============================================================================
 def _find_recipes_file() -> str:
-    """Busca el JSON de recetas en data/ primero, luego en la raíz."""
+    """Looks for the recipes JSON in data/ first, then in the root."""
     candidates = [
         "data/recetas_backend_proceso_ultra.json",
         "recetas_backend_proceso_ultra.json",
@@ -64,7 +64,7 @@ def _find_recipes_file() -> str:
     for path in candidates:
         if os.path.exists(path):
             return path
-    # Devuelve la ruta preferida aunque no exista (fallará con mensaje claro)
+    # Returns preffered path even if it doesn't exists (fallback with message error)
     return candidates[0]
 
 
@@ -72,15 +72,8 @@ def _find_recipes_file() -> str:
 class AppConfig:
     """Configuración funcional de la aplicación."""
 
-    # ── Google Cloud ────────────────────────────────────────────────────────
-    # Busca en variable de entorno primero; si no, usa el valor por defecto.
-    # Antes de cada lab nuevo: export GOOGLE_CLOUD_PROJECT=<nuevo-project-id>
-    VERTEX_PROJECT_ID: str = field(
-        default_factory=lambda: os.environ.get(
-            "GOOGLE_CLOUD_PROJECT", "qwiklabs-gcp-04-f46aab7b85f0"
-        )
-    )
-    VERTEX_LOCATION: str = "us-central1"
+    # ── Gemini Key ────────────────────────────────────────────────────────
+    GEMINI_API_KEY: str = field(default_factory=lambda: os.environ.get("GEMINI_API_KEY", ""))
 
     # ── Paths ────────────────────────────────────────────────────────────────
     DATA_DIR:      str = "data"
@@ -94,13 +87,13 @@ class AppConfig:
     DEFAULT_CONFIDENCE: float = 0.5
     MAX_INGREDIENTS:    int   = 20
 
-    # ── Recomendaciones ──────────────────────────────────────────────────────
+    # ── Recommendations ──────────────────────────────────────────────────────
     DEFAULT_N_RECIPES: int = 5
     MAX_N_RECIPES:     int = 10
 
-    # ── Modos de operación ───────────────────────────────────────────────────
-    # IMPORTANTE: usamos strings literales de color, NO Colors.X,
-    # porque el dataclass Colors no está instanciado en este punto.
+    # ── Operation modes ───────────────────────────────────────────────────
+    # IMPORTANT: we use literal color strings, NOT Colors.X,
+    # because the Colors dataclass is not instantiated at this point.
     MODES: Dict[str, Dict] = field(default_factory=lambda: {
         "survival": {
             "name": "Survival",
@@ -118,8 +111,8 @@ class AppConfig:
             "name": "Chef Pro",
             "icon": "👨‍🍳",
             "description": "Experiencias gastronómicas completas",
-            "color": "#a78bfa",       # PURPLE_NEBULA
-            "accent": "#c4b5fd",      # Purple más claro para hover
+            "color": "#a78bfa",      
+            "accent": "#c4b5fd",     
             "max_missing": 5,
             "dificultad_bonus": {"baja": 0, "media": 20, "alta": 40},
             "show_techniques": True,
@@ -129,16 +122,15 @@ class AppConfig:
     })
 
     def ensure_dirs(self):
-        """Crea directorios necesarios si no existen."""
+        """Creates required directories if they don't exist."""
         os.makedirs(self.DATA_DIR, exist_ok=True)
 
     def get_mode(self, mode_key: str) -> Dict:
-        """Devuelve la config de un modo con fallback a survival."""
+        """Returns the config for a given mode, falling back to survival"""
         return self.MODES.get(mode_key, self.MODES["survival"])
-
-
+        
 # ============================================================================
-# INSTANCIAS GLOBALES — importar desde cualquier módulo
+# GLOBAL INSTANCES — import from any module
 # ============================================================================
 COLORS = Colors()
 TYPO   = Typography()
