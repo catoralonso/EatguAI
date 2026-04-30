@@ -52,7 +52,7 @@ def expand_ingredients(ingredients: List[str]) -> Set[str]:
             max_tokens=1024,
             messages=[{"role": "user", "content": prompt}]
         )
-	text = response.content[0].text
+		text = response.content[0].text
         mapping: Dict[str, List[str]] = json.loads(text)
 
         expanded = base_set.copy()
