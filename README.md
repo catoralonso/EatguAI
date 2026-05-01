@@ -21,7 +21,7 @@ EatguAI combines **computer vision** and a **NLP-based recommendation engine** t
 ![Cloud Run](https://img.shields.io/badge/Cloud_Run-Deployed-34A853?logo=googlecloud&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Infra-Terraform-7B42BC?logo=terraform&logoColor=white)
 
-🔗 **[Live Demo](https://eatguai-naqwfs473q-uc.a.run.app/)**
+🔗 **[Live Demo](https://huggingface.co/spaces/catoralonso/eatguai)**
 ---
 
 ## What makes it interesting
